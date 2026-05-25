@@ -34,12 +34,36 @@ Contraintes :
 - [x] Page **Nos produits** : 5 catégories (bœuf, agneau, veau, volaille, spécialités maison) avec prix indicatifs
 - [x] Page **Contact** : intro, section Aïd al-Adha, coordonnées
 
+### Jour 2-3 — Structure HTML/CSS (en cours)
+- [x] Arborescence du projet (`index.html`, `viande.html`, `produits.html`, `contact.html`, `assets/`)
+- [x] Design system CSS (palette vert/blanc cassé/or, typo Playfair + Inter)
+- [x] Navigation responsive (menu burger sur mobile)
+- [x] Page Accueil complète (hero, à propos, features, infos pratiques)
+- [x] Page Notre viande (intro + 4 sections + CTA)
+- [x] Page Nos produits (5 catégories avec prix)
+- [x] Page Contact (formulaire + infos + encart Aïd)
+- [x] Footer global cohérent sur les 4 pages
+- [x] Config Netlify (`netlify.toml`) + `.gitignore`
+- [ ] Déploiement sur Netlify (à faire côté interface web)
+
 ### À faire
-- [ ] Jour 2-3 : structure HTML/CSS des 4 pages, déploiement Netlify
 - [ ] Jour 4 : connexion Supabase pour le formulaire de contact
 - [ ] Jour 5 : intégration chatbot FAQ
 - [ ] Jour 6 : polish (responsive mobile, SEO, performance)
-- [ ] Jour 7 : README projet + captures + mise en valeur
+- [ ] Jour 7 : README projet final + captures + mise en valeur
+
+---
+
+## Lancer le site en local (sur Mac)
+
+```bash
+cd ~/Documents/Business-Solo/boucherie-al-baraka
+git pull origin claude/pensive-hawking-bqLER
+code .
+```
+
+Dans VS Code, ouvre `index.html`, clic droit → **Open with Live Server**.
+Le site s'ouvre sur `http://127.0.0.1:5500` avec rechargement automatique à chaque modification.
 
 ---
 
