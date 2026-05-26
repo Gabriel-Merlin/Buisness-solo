@@ -34,7 +34,7 @@ Contraintes :
 - [x] Page **Nos produits** : 5 catégories (bœuf, agneau, veau, volaille, spécialités maison) avec prix indicatifs
 - [x] Page **Contact** : intro, section Aïd al-Adha, coordonnées
 
-### Jour 2-3 — Structure HTML/CSS (en cours)
+### Jour 2-3 — Structure HTML/CSS
 - [x] Arborescence du projet (`index.html`, `viande.html`, `produits.html`, `contact.html`, `assets/`)
 - [x] Design system CSS (palette vert/blanc cassé/or, typo Playfair + Inter)
 - [x] Navigation responsive (menu burger sur mobile)
@@ -46,8 +46,14 @@ Contraintes :
 - [x] Config Netlify (`netlify.toml`) + `.gitignore`
 - [ ] Déploiement sur Netlify (à faire côté interface web)
 
+### Jour 4 — Supabase
+- [x] Projet Supabase créé (`csspxsnqobftispxvnmw`)
+- [x] Table `contact_submissions` (name, email, phone, subject, message)
+- [x] RLS activé + policy `Allow anonymous inserts` (role anon, INSERT only)
+- [x] Formulaire de contact câblé via l'API REST Supabase
+- [x] Gestion des états (envoi en cours, succès, erreur) + reset du formulaire
+
 ### À faire
-- [ ] Jour 4 : connexion Supabase pour le formulaire de contact
 - [ ] Jour 5 : intégration chatbot FAQ
 - [ ] Jour 6 : polish (responsive mobile, SEO, performance)
 - [ ] Jour 7 : README projet final + captures + mise en valeur
