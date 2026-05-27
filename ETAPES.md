@@ -2,7 +2,21 @@
 
 > Ce fichier est ta carte de progression. Tous les jalons techniques, business et personnels du projet, dans l'ordre. Coche les cases au fur et à mesure. Mets à jour les compétences quand tu les acquiers.
 >
-> **Objectif final** : maîtriser le modèle "build + retainer" pour signer des clients à 1 500 € + 80 €/mois récurrent, en 100 % halal.
+> **Objectif final** : maîtriser le modèle "build + retainer" pour signer des clients à 700 € + 70 €/mois récurrent au début, et monter à 1 500 € + 150 €/mois à maturité, en 100 % halal.
+
+---
+
+## Pivot stratégique (suite au retour du père développeur web)
+
+**Insight clé :** les petits commerçants ne veulent pas un site sophistiqué. Ils veulent **être trouvés sur Google** et **recevoir des appels**. Le dashboard et le chatbot intéressent ~20 % du marché (restaurants avec réservations, coachs avec rendez-vous, artisans avec devis), pas la majorité.
+
+**Conséquences sur l'offre :**
+- L'offre par défaut devient le **"Pack Présence Locale"** : site vitrine simple + Google Business Profile + formulaire qui envoie un email au client.
+- Le dashboard admin reste un **module premium** pour les 20 % qui en ont vraiment besoin (ou pour l'apprentissage personnel).
+- Le chatbot devient une **option** vendue séparément, pas l'argument central.
+- Le **positionnement marketing** change : "j'aide les commerces de [zone] à être trouvés sur Google et à recevoir plus d'appels", au lieu de "je crée des sites IA + dashboards".
+
+**Nouvelle compétence prioritaire :** Google Business Profile (gratuit, énorme impact réel, ~1 h pour apprendre l'essentiel).
 
 ---
 
@@ -11,7 +25,8 @@
 1. [Vue d'ensemble](#vue-densemble)
 2. [Phase 0 — Setup (terminé)](#phase-0--setup)
 3. [Phase 1 — Démo Boucherie Al-Baraka (en cours)](#phase-1--démo-boucherie-al-baraka)
-4. [Phase 2 — Démo n°2 et n°3](#phase-2--démos-supplémentaires)
+4. [Phase 1.5 — Projet pilote gratuit](#phase-15--projet-pilote-gratuit-avant-les-18-ans)
+5. [Phase 2 — Démo n°2 et n°3](#phase-2--démos-supplémentaires)
 5. [Phase 3 — Portfolio personnel et profils pro](#phase-3--portfolio-personnel)
 6. [Phase 4 — Prospection et premiers clients](#phase-4--prospection-et-premiers-clients)
 7. [Phase 5 — Retainer et revenus récurrents](#phase-5--retainer-et-revenus-récurrents)
@@ -27,9 +42,10 @@
 |---|---|---|---|
 | 0 | Setup | 1 jour | ✅ Terminé |
 | 1 | Démo Boucherie Al-Baraka | 10-12 jours | 🟡 En cours |
+| 1.5 | Projet pilote gratuit (vrai client, avant 18 ans) | 2-3 semaines | ⏳ À venir |
 | 2 | 2 autres démos | 2-3 semaines | ⏳ À venir |
 | 3 | Portfolio personnel + profils | 1 semaine | ⏳ À venir |
-| 4 | Prospection + premier client | 1-3 mois | ⏳ À venir |
+| 4 | Prospection + premier client payant | 1-3 mois | ⏳ À venir |
 | 5 | Modèle retainer | Continu | ⏳ À venir |
 
 ---
@@ -91,7 +107,15 @@
 - [ ] Vérification accessibilité basique (alt text, contraste)
 - [ ] Renommage du repo `Buisness-solo` → `business-solo` (coquille)
 
-### Jour 7-10 — Mini-dashboard admin (gros morceau, gros gain de compétence)
+### Jour 7 — Notification email + Google Business Profile (priorité après pivot)
+- [ ] Compte Resend créé (envoi d'emails transactionnels gratuit)
+- [ ] Trigger Supabase qui envoie un email à chaque nouvelle soumission
+- [ ] Email reçu en quelques secondes côté Gmail/Outlook fictif
+- [ ] Création d'une fiche Google Business Profile (test sur boutique fictive)
+- [ ] Comprendre les leviers : photos, posts, avis clients, horaires, attributs
+- [ ] Notes sur ce que tu apprends pour le proposer à tes futurs clients
+
+### Jour 8-10 — Mini-dashboard admin (module premium / apprentissage perso)
 - [ ] Comprendre Supabase Auth (concepts : utilisateurs, sessions, JWT)
 - [ ] Créer une page `admin/login.html` avec formulaire de connexion
 - [ ] Créer une page `admin/index.html` (dashboard) protégée par auth
@@ -109,6 +133,25 @@
 - [ ] Lien live bien visible
 - [ ] Description GitHub du repo remplie + topics
 - [ ] Partage à 3 proches pour retours
+
+---
+
+## Phase 1.5 — Projet pilote gratuit (avant les 18 ans)
+
+> Stratégie validée : faire un site gratuit pour un commerçant que tu connais déjà (par exemple un restaurateur chez qui tu manges régulièrement). Avant les 18 ans, c'est légal car aucune rémunération n'est échangée. Objectif : tester tes compétences en conditions réelles, gagner un témoignage, et arriver à la déclaration en micro-entreprise avec un cas concret à montrer.
+
+- [ ] Choix du commerçant cible (restaurant connu, contact direct)
+- [ ] Premier RDV informel (autour d'un repas) pour proposer l'idée
+- [ ] Cadrage clair par écrit avant de démarrer : scope, durée, contreparties (témoignage, photos)
+- [ ] Recueil des contenus du client (textes, photos, infos pratiques)
+- [ ] Construction du site (réutilise le design system de la démo Boucherie)
+- [ ] Configuration Google Business Profile du client
+- [ ] Connexion d'un nom de domaine si le client en a un (sinon URL Pages suffit)
+- [ ] Formation flash du client (15 min) sur comment lire les messages reçus
+- [ ] Livraison officielle avec petit document récapitulatif
+- [ ] Obtention d'un témoignage écrit du client (utilisable sur portfolio)
+- [ ] Photos avant/après du site pour le portfolio
+- [ ] Pas d'engagement de maintenance illimité : limites claires posées dès le début
 
 ---
 
@@ -259,6 +302,13 @@
 - [ ] Webhooks et automatisations (Zapier, n8n, Make)
 - [ ] Emails transactionnels (Resend, SendGrid)
 
+### Visibilité locale (priorité après pivot)
+- [ ] Google Business Profile : création, optimisation, photos, posts
+- [ ] Gestion des avis clients (demande, réponses)
+- [ ] Référencement local basique (mots-clés "boucher halal Paris 18e")
+- [ ] Outils gratuits : Google Search Console, Google Trends
+- [ ] Compréhension du parcours client réel : qui cherche quoi, où, comment
+
 ### Qualité et performance
 - [ ] Lighthouse / PageSpeed Insights
 - [ ] SEO basique (meta tags, sitemap, robots.txt)
@@ -351,3 +401,5 @@
 **Le retainer est l'objectif** : un freelance qui ne fait que du one-shot recommence à zéro chaque mois. Un freelance avec 10 clients en retainer dort tranquille.
 
 **100 % halal sur la durée** : refuser un client haram à court terme te protège sur le long terme — réputation, baraka, paix intérieure. C'est rentable même au sens matériel.
+
+**Écouter les pros de l'ancienne génération.** Le retour du père développeur sur "les commerçants veulent juste être trouvés sur Google, pas une stack technologique" vaut 100 articles Medium. Toujours valider les hypothèses avec des gens qui ont vraiment vendu sur ce marché.
