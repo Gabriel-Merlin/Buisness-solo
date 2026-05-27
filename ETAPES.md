@@ -157,6 +157,24 @@
 
 ---
 
+## Phase 1.75 — Préparation prospection (à faire avant le 24 juin 2026)
+
+> Voir le fichier **`PROSPECTION.md`** pour la méthodologie complète, les templates d'email et les scripts de RDV.
+
+- [x] Méthodologie de qualification des prospects rédigée
+- [x] 4 templates d'email de prospection (approche directe, recommandation, relance 1, relance 2)
+- [x] Phone script et script de premier RDV rédigés
+- [x] Système de suivi CSV créé (`prospects-template.csv`)
+- [x] Routine quotidienne de prospection définie
+- [ ] **Liste réelle de 30 prospects** à compléter dans le CSV (~2-3 h de recherche Google Maps)
+- [ ] Email de prospection personnalisé pour 5 premiers prospects (test)
+- [ ] Configuration Google Sheets ou Notion à partir du CSV
+- [ ] Premier audit GBP gratuit d'un commerce local fait pour apprendre
+- [ ] Profil LinkedIn pro finalisé
+- [ ] Page portfolio publique mise à jour avec la démo Boucherie
+
+---
+
 ## Phase 2 — Démos supplémentaires
 
 ### Démo 2 — Coach sportif (idée par défaut, à valider)
