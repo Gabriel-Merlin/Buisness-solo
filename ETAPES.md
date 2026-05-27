@@ -108,9 +108,10 @@
 - [ ] Renommage du repo `Buisness-solo` → `business-solo` (coquille)
 
 ### Jour 7 — Notification email + Google Business Profile (priorité après pivot)
-- [ ] Compte Resend créé (envoi d'emails transactionnels gratuit)
-- [ ] Trigger Supabase qui envoie un email à chaque nouvelle soumission
-- [ ] Email reçu en quelques secondes côté Gmail/Outlook fictif
+- [x] Compte Resend créé (envoi d'emails transactionnels gratuit)
+- [x] Edge Function Supabase déployée (`send-contact-notification` / `dynamic-api`)
+- [x] Database Webhook configuré (INSERT sur `contact_submissions`)
+- [x] Email reçu en moins d'1 min côté boîte mail (testé en bout-en-bout)
 - [ ] Création d'une fiche Google Business Profile (test sur boutique fictive)
 - [ ] Comprendre les leviers : photos, posts, avis clients, horaires, attributs
 - [ ] Notes sur ce que tu apprends pour le proposer à tes futurs clients
