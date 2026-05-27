@@ -112,9 +112,10 @@
 - [x] Edge Function Supabase déployée (`send-contact-notification` / `dynamic-api`)
 - [x] Database Webhook configuré (INSERT sur `contact_submissions`)
 - [x] Email reçu en moins d'1 min côté boîte mail (testé en bout-en-bout)
-- [ ] Création d'une fiche Google Business Profile (test sur boutique fictive)
-- [ ] Comprendre les leviers : photos, posts, avis clients, horaires, attributs
-- [ ] Notes sur ce que tu apprends pour le proposer à tes futurs clients
+- [x] Théorie GBP maîtrisée : 12 leviers + 3 erreurs fatales + méthode d'audit
+- [x] PDF Audit-GBP.pdf créé (outil de vente avec 10 points + offre + pitch)
+- [ ] Audit pratique de 3-5 boucheries locales sur Google Maps (exercice)
+- [ ] Tester l'interface admin GBP (via proche commerçant OU sa propre fiche au 17 juin)
 
 ### Jour 8-10 — Mini-dashboard admin (module premium / apprentissage perso)
 - [ ] Comprendre Supabase Auth (concepts : utilisateurs, sessions, JWT)
