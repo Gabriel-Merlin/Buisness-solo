@@ -22,6 +22,7 @@ Buisness-solo/
 ├── README.md                       # Ce fichier — vue d'ensemble
 ├── ETAPES.md                       # Carte d'apprentissage et progression
 ├── PROSPECTION.md                  # Méthodologie + 4 templates email + scripts RDV
+├── CHATBASE-PLANS.md               # Grille des plans Chatbase + décision par client
 ├── prospects-template.csv          # Template Google Sheets pour suivi prospects
 │
 ├── index.html                      # Démo Boucherie : Accueil
