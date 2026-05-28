@@ -166,12 +166,13 @@
 - [x] Phone script et script de premier RDV rédigés
 - [x] Système de suivi CSV créé (`prospects-template.csv`)
 - [x] Routine quotidienne de prospection définie
-- [ ] **Liste réelle de 30 prospects** à compléter dans le CSV (~2-3 h de recherche Google Maps)
-- [ ] Email de prospection personnalisé pour 5 premiers prospects (test)
-- [ ] Configuration Google Sheets ou Notion à partir du CSV
-- [ ] Premier audit GBP gratuit d'un commerce local fait pour apprendre
+- [x] Liste de 30 prospects identifiés (Le Mans + Chartres, PDF `Prospects-30.pdf`)
+- [x] Page portfolio publique créée (`portfolio.html`)
+- [x] Email pro créé : gabriel.merlin.pro@outlook.com
+- [ ] Téléphone à compléter sur la page portfolio avant publication
+- [ ] Audits GBP des 30 prospects (5 par jour pendant 6 jours)
 - [ ] Profil LinkedIn pro finalisé
-- [ ] Page portfolio publique mise à jour avec la démo Boucherie
+- [ ] Achat d'un nom de domaine personnel (optionnel, ~12 €/an)
 
 ---
 
