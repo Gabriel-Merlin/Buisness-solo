@@ -137,15 +137,20 @@
 - [x] Favicons intégrés sur les 5 pages
 - [x] Balises meta complètes (description, robots, theme-color, canonical)
 - [x] Open Graph + Twitter Card sur les 5 pages
-- [x] Structured Data JSON-LD (Butcher sur index, ProfessionalService sur portfolio)
+- [x] Structured Data JSON-LD (Store + LocalBusiness avec geo coords sur index, ProfessionalService sur portfolio)
 - [x] sitemap.xml créé (5 URLs avec priorités)
 - [x] robots.txt créé (Allow all + sitemap reference)
 - [x] Suppression dépendance Unsplash (hero CSS-only, gradient + motif SVG inline)
 - [x] Skip-link "Aller au contenu principal" sur les 5 pages
 - [x] Focus visible global (outline accent au clavier)
 - [x] `id="main"` ajouté sur les balises main des 5 pages
-- [ ] Test PageSpeed Insights manuel (à faire côté Gabriel)
-- [ ] Test responsive sur vrais mobiles iPhone + Android (à faire côté Gabriel)
+- [x] Lazy-loading Chatbase (assets/js/chatbase-lazy.js) — charge à la 1re interaction ou après 4 s
+- [x] Heading order corrigé sur produits.html et contact.html (h3 → h2 sous h1)
+- [x] PageSpeed Desktop : 100 / 95 / 100 / 100 (perf / a11y / bonnes pratiques / SEO)
+- [x] Schema Markup Validator : 0 erreur, 0 avertissement
+- [ ] Re-test PageSpeed Mobile après lazy-load (devrait passer de 57 à 80+ en perf)
+- [ ] Identifier élément avec contraste insuffisant (audit a11y)
+- [ ] Test responsive sur vrais mobiles iPhone + Android (manuel)
 - [ ] Renommage du repo `Buisness-solo` → `business-solo` (optionnel)
 
 ### Jour 7 — Notification email + Google Business Profile (priorité après pivot)

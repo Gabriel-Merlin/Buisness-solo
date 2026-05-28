@@ -459,9 +459,11 @@ img {
   border-bottom: 1px solid var(--color-border);
 }
 
+.category__header h2,
 .category__header h3 {
   margin: 0;
   color: var(--color-primary-dark);
+  font-size: 1.25rem;
 }
 
 .category__header span {
@@ -514,12 +516,14 @@ img {
   align-items: start;
 }
 
+.contact-info h2,
 .contact-info h3 {
   color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.95rem;
   margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 
 .contact-info p {
@@ -590,9 +594,13 @@ img {
   margin-top: 2.5rem;
 }
 
+.aid-callout h2,
 .aid-callout h3 {
   color: var(--color-accent);
   margin-top: 0;
+  font-size: 1.15rem;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .aid-callout p {

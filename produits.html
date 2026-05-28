@@ -55,7 +55,7 @@
         <div class="catalogue">
           <article class="category">
             <header class="category__header">
-              <h3>Bœuf</h3>
+              <h2>Bœuf</h2>
               <span>Charolais du Limousin, maturation soignée</span>
             </header>
             <ul class="products">
@@ -69,7 +69,7 @@
 
           <article class="category">
             <header class="category__header">
-              <h3>Agneau</h3>
+              <h2>Agneau</h2>
               <span>Quercy, élevage extensif</span>
             </header>
             <ul class="products">
@@ -82,7 +82,7 @@
 
           <article class="category">
             <header class="category__header">
-              <h3>Veau</h3>
+              <h2>Veau</h2>
               <span>Aveyron, élevage sous la mère</span>
             </header>
             <ul class="products">
@@ -95,7 +95,7 @@
 
           <article class="category">
             <header class="category__header">
-              <h3>Volaille</h3>
+              <h2>Volaille</h2>
               <span>Fermière, élevée en plein air</span>
             </header>
             <ul class="products">
@@ -108,7 +108,7 @@
 
           <article class="category">
             <header class="category__header">
-              <h3>Spécialités maison</h3>
+              <h2>Spécialités maison</h2>
               <span>Préparées chaque matin par notre maître-boucher</span>
             </header>
             <ul class="products">
@@ -160,31 +160,6 @@
   <button class="chatbot-stub" aria-label="Ouvrir le chatbot" hidden>Une question ?</button>
 
   <script src="assets/js/script.js"></script>
-
-  <!-- Chatbase widget — Al-Baraka FAQ -->
-  <script>
-  (function(){
-    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-      window.chatbase=(...arguments)=>{
-        if(!window.chatbase.q){window.chatbase.q=[]}
-        window.chatbase.q.push(arguments)
-      };
-      window.chatbase=new Proxy(window.chatbase,{
-        get(target,prop){
-          if(prop==="q"){return target.q}
-          return(...args)=>target(prop,...args)
-        }
-      })
-    }
-    const onLoad=function(){
-      const script=document.createElement("script");
-      script.src="https://www.chatbase.co/embed.min.js";
-      script.id="JkMH2TOyBfO9P_iIwI5Kv";
-      script.domain="www.chatbase.co";
-      document.body.appendChild(script)
-    };
-    if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
-  })();
-  </script>
+  <script src="assets/js/chatbase-lazy.js" defer></script>
 </body>
 </html>
