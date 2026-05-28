@@ -132,14 +132,21 @@
 - [x] Widget intégré sur les 4 pages (chatbotId: JkMH2TOyBfO9P_iIwI5Kv)
 - [x] Stub précédent caché avec attribut `hidden`
 
-### Jour 6 — Polish
-- [ ] Favicon créé et intégré
-- [ ] Balises meta complètes sur chaque page (titre, description, OG)
-- [ ] Test responsive sur vrais mobiles (iPhone + Android)
-- [ ] Score PageSpeed Insights > 90 (desktop) et > 80 (mobile)
-- [ ] Image hero locale (pas dépendante d'Unsplash)
-- [ ] Vérification accessibilité basique (alt text, contraste)
-- [ ] Renommage du repo `Buisness-solo` → `business-solo` (coquille)
+### Jour 6 — Polish ✅
+- [x] Favicons SVG créés (`favicon-boucherie.svg` + `favicon-portfolio.svg`)
+- [x] Favicons intégrés sur les 5 pages
+- [x] Balises meta complètes (description, robots, theme-color, canonical)
+- [x] Open Graph + Twitter Card sur les 5 pages
+- [x] Structured Data JSON-LD (Butcher sur index, ProfessionalService sur portfolio)
+- [x] sitemap.xml créé (5 URLs avec priorités)
+- [x] robots.txt créé (Allow all + sitemap reference)
+- [x] Suppression dépendance Unsplash (hero CSS-only, gradient + motif SVG inline)
+- [x] Skip-link "Aller au contenu principal" sur les 5 pages
+- [x] Focus visible global (outline accent au clavier)
+- [x] `id="main"` ajouté sur les balises main des 5 pages
+- [ ] Test PageSpeed Insights manuel (à faire côté Gabriel)
+- [ ] Test responsive sur vrais mobiles iPhone + Android (à faire côté Gabriel)
+- [ ] Renommage du repo `Buisness-solo` → `business-solo` (optionnel)
 
 ### Jour 7 — Notification email + Google Business Profile (priorité après pivot)
 - [x] Compte Resend créé (envoi d'emails transactionnels gratuit)

@@ -5,12 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Boucherie Al-Baraka — Boucherie halal artisanale à Paris</title>
   <meta name="description" content="Boucherie halal artisanale à Paris depuis 2015. Viandes sélectionnées du terroir français, abattage rituel, savoir-faire familial." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1a4d3a" />
+  <link rel="canonical" href="https://gabriel-merlin.github.io/Buisness-solo/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon-boucherie.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Boucherie Al-Baraka" />
+  <meta property="og:title" content="La Boucherie Al-Baraka — Boucherie halal artisanale à Paris" />
+  <meta property="og:description" content="Viandes sélectionnées du terroir français, abattage rituel, savoir-faire familial depuis 2015." />
+  <meta property="og:url" content="https://gabriel-merlin.github.io/Buisness-solo/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Boucherie Al-Baraka — Halal artisanale à Paris" />
+  <meta name="twitter:description" content="Viandes sélectionnées, abattage rituel, savoir-faire familial depuis 2015." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Structured data (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Butcher",
+    "name": "Boucherie Al-Baraka",
+    "image": "https://gabriel-merlin.github.io/Buisness-solo/assets/img/favicon-boucherie.svg",
+    "url": "https://gabriel-merlin.github.io/Buisness-solo/",
+    "telephone": "+33147359912",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "52 rue Marx Dormoy",
+      "addressLocality": "Paris",
+      "postalCode": "75018",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "description": "Boucherie halal artisanale à Paris depuis 2015. Viandes du terroir français, abattage rituel, sacrifices Aïd al-Adha."
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a href="index.html" class="logo">Al-<span>Baraka</span></a>
@@ -28,7 +84,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="container">
         <h1>La Boucherie Al-Baraka — Boucherie halal artisanale à Paris</h1>
