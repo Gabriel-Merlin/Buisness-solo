@@ -137,8 +137,34 @@
     </div>
   </footer>
 
-  <button class="chatbot-stub" aria-label="Ouvrir le chatbot">Une question ?</button>
+  <button class="chatbot-stub" aria-label="Ouvrir le chatbot" hidden>Une question ?</button>
 
   <script src="assets/js/script.js"></script>
+
+  <!-- Chatbase widget — Al-Baraka FAQ -->
+  <script>
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JkMH2TOyBfO9P_iIwI5Kv";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+  })();
+  </script>
 </body>
 </html>

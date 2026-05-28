@@ -124,12 +124,13 @@
 - [x] Default value `now()` sur `created_at`
 - [x] Test end-to-end réussi (soumission visible dans Supabase)
 
-### Jour 5 — Chatbot FAQ
-- [ ] Compte Chatbase créé (ou choix API Claude)
-- [ ] Knowledge base rédigée (~20 questions/réponses)
-- [ ] Widget intégré sur les 4 pages
-- [ ] Test sur 10 questions différentes
-- [ ] Remplacement du stub par le vrai widget
+### Jour 5 — Chatbot FAQ ✅
+- [x] Compte Chatbase créé
+- [x] Knowledge base rédigée (24 paires Q/R Al-Baraka)
+- [x] Bot entraîné sur "Text" via "Autres sources"
+- [x] Test réussi (réponses cohérentes + ton naturel)
+- [x] Widget intégré sur les 4 pages (chatbotId: JkMH2TOyBfO9P_iIwI5Kv)
+- [x] Stub précédent caché avec attribut `hidden`
 
 ### Jour 6 — Polish
 - [ ] Favicon créé et intégré
