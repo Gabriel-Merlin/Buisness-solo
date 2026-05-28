@@ -9,7 +9,8 @@
   --color-ink-soft: #555555;
   --color-primary: #1a4d3a;
   --color-primary-dark: #133629;
-  --color-accent: #c9a14a;
+  --color-accent: #c9a14a;          /* Or — éléments décoratifs (icônes, bordures, fonds) */
+  --color-accent-strong: #8a6b1e;   /* Or foncé — texte sur fond clair (WCAG AA, ~5.5:1) */
   --color-border: #e8e2d4;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
@@ -89,7 +90,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 img {
@@ -133,7 +134,7 @@ img {
 }
 
 .logo span {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 .nav__list {
@@ -337,8 +338,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(201, 161, 74, 0.15);
-  color: var(--color-accent);
+  background-color: rgba(138, 107, 30, 0.18);
+  color: var(--color-accent-strong);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,7 +378,7 @@ img {
 
 .info-card h3 {
   font-size: 1.05rem;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -490,7 +491,7 @@ img {
 }
 
 .products li span {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
@@ -518,7 +519,7 @@ img {
 
 .contact-info h2,
 .contact-info h3 {
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.95rem;

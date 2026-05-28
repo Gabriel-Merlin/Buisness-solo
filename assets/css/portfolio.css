@@ -7,6 +7,7 @@
   --color-primary: #0f172a;        /* Slate 900 — quasi noir */
   --color-primary-dark: #020617;   /* Slate 950 — noir presque pur */
   --color-accent: #1e40af;         /* Deep blue — accent unique */
+  --color-accent-strong: #1e40af;  /* Identique : le bleu a déjà un contraste suffisant sur blanc (~9:1) */
   --color-bg: #ffffff;             /* Blanc pur */
   --color-surface: #f8fafc;        /* Slate 50 — surface très claire */
   --color-border: #e2e8f0;         /* Slate 200 — bordures discrètes */
