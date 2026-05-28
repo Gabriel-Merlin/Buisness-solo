@@ -56,13 +56,30 @@
 
 | Phase | Objectif | Durée estimée | Statut |
 |---|---|---|---|
-| 0 | Setup | 1 jour | ✅ Terminé |
-| 1 | Démo Boucherie Al-Baraka | 10-12 jours | 🟡 En cours |
-| 1.5 | Projet pilote gratuit (vrai client, avant 18 ans) | 2-3 semaines | ⏳ À venir |
+| 0 | Setup technique | 1 jour | ✅ Terminé |
+| 1 | Démo Boucherie Al-Baraka | 10-12 jours | 🟡 En cours (Jours 1-4 + 7 faits, reste 5, 6, 8-10) |
+| 1.5 | Projet pilote gratuit (site sœur anti-harcèlement) | 2-3 semaines | ⏳ À venir |
+| 1.75 | Préparation prospection (avant 24 juin) | En continu | 🟡 En cours (assets prêts, audits à faire) |
 | 2 | 2 autres démos | 2-3 semaines | ⏳ À venir |
-| 3 | Portfolio personnel + profils | 1 semaine | ⏳ À venir |
-| 4 | Prospection + premier client payant | 1-3 mois | ⏳ À venir |
+| 3 | Portfolio personnel + profils | 1 semaine | 🟡 Portfolio en ligne, profils à faire |
+| 4 | Prospection + premier client payant | 1-3 mois | ⏳ À venir (post bac) |
 | 5 | Modèle retainer | Continu | ⏳ À venir |
+
+### Plan immédiat (les 4 prochaines sessions)
+1. **Jour 5 — Chatbot FAQ** (en cours)
+2. **Jour 6 — Polish** (favicon, SEO, perf, image hero locale)
+3. **Jours 8-10 — Mini-dashboard admin** (Supabase Auth + CRUD complet)
+4. **Phase 1.5 — Site sœur** (cadrage + construction + livraison)
+
+### 8 axes de formation (post-démo Boucherie, ordre prioritaire)
+1. Comptabilité micro-entreprise (urgent pour le 17 juin)
+2. Rédaction commerciale (devis, négo, emails clients)
+3. ~~Supabase Auth + Dashboard~~ (déjà couvert par Jours 8-10)
+4. GBP avancé (audits réels, posts, avis)
+5. Cybersécurité basique (clés API, RGPD, sécurité formulaires)
+6. CSS/HTML avancé (animations, accessibilité WCAG, performance)
+7. JavaScript moderne (modules, arrays, debugging DevTools)
+8. Git avancé (branches, conflits, revert, PR)
 
 ---
 
@@ -156,20 +173,31 @@
 
 ## Phase 1.5 — Projet pilote gratuit (avant les 18 ans)
 
-> Stratégie validée : faire un site gratuit pour un commerçant que tu connais déjà (par exemple un restaurateur chez qui tu manges régulièrement). Avant les 18 ans, c'est légal car aucune rémunération n'est échangée. Objectif : tester tes compétences en conditions réelles, gagner un témoignage, et arriver à la déclaration en micro-entreprise avec un cas concret à montrer.
+> Stratégie validée : faire un site gratuit pour un proche, avant la déclaration en micro-entreprise. Avant les 18 ans, c'est légal car aucune rémunération n'est échangée. Objectif : tester les compétences en conditions réelles, gagner un témoignage, arriver à la déclaration avec un cas concret à montrer.
 
-- [ ] Choix du commerçant cible (restaurant connu, contact direct)
-- [ ] Premier RDV informel (autour d'un repas) pour proposer l'idée
-- [ ] Cadrage clair par écrit avant de démarrer : scope, durée, contreparties (témoignage, photos)
-- [ ] Recueil des contenus du client (textes, photos, infos pratiques)
-- [ ] Construction du site (réutilise le design system de la démo Boucherie)
-- [ ] Configuration Google Business Profile du client
-- [ ] Connexion d'un nom de domaine si le client en a un (sinon URL Pages suffit)
-- [ ] Formation flash du client (15 min) sur comment lire les messages reçus
-- [ ] Livraison officielle avec petit document récapitulatif
-- [ ] Obtention d'un témoignage écrit du client (utilisable sur portfolio)
-- [ ] Photos avant/après du site pour le portfolio
-- [ ] Pas d'engagement de maintenance illimité : limites claires posées dès le début
+**Option retenue : site anti-harcèlement pour le lycée de la sœur de Gabriel.**
+
+Avantages vs le restaurateur : client connu (sœur), sujet à fort impact social (différent du commercial pur), cas client institutionnel = diversité du portfolio, formation à la rédaction sensible et à l'accessibilité.
+
+### Cadrage à valider avec la sœur (avant tout code)
+- [ ] Qui pilote le projet (sœur seule / prof / asso lycéenne) ?
+- [ ] Périmètre : page informative / multi-pages / formulaire de signalement ?
+- [ ] Le lycée valide-t-il (hébergement officiel possible) ?
+- [ ] Niveau de sensibilité des infos (RGPD si formulaire de signalement) ?
+- [ ] Deadline (fin d'année scolaire ou rentrée) ?
+
+### Construction
+- [ ] Cadrage écrit signé (scope, durée, contreparties = témoignage + droit portfolio)
+- [ ] Rédaction du contenu (avec ou via la sœur)
+- [ ] Maquette validée par la sœur avant code
+- [ ] Construction HTML/CSS (réutilise le design system, mais palette adaptée au sujet sensible — pas de vert/or commercial)
+- [ ] Formulaire de signalement si retenu (RLS Supabase stricte, anonymat respecté)
+- [ ] Accessibilité WCAG basique (alt text, contraste, navigation clavier)
+- [ ] Tests par 3-5 lycéens avant livraison
+- [ ] Livraison + petit document récapitulatif
+- [ ] Témoignage écrit obtenu (sœur + idéalement prof référent)
+- [ ] Photos avant/après pour le portfolio
+- [ ] Limites posées dès le début : pas de maintenance gratuite illimitée
 
 ---
 
@@ -326,33 +354,44 @@
 
 ### Déploiement et hébergement
 - [x] GitHub Pages (sites statiques)
-- [ ] Netlify (sites statiques + fonctions serverless)
+- [x] HTTPS automatique (Let's Encrypt via GitHub Pages)
+- [x] CDN (concept compris — GitHub Pages utilise Fastly)
+- [ ] Netlify (sites statiques + fonctions serverless) — compte créé, à pratiquer
 - [ ] Vercel (alternative)
 - [ ] Domaine personnalisé (achat + DNS)
-- [ ] HTTPS (Let's Encrypt)
-- [ ] CDN (concept)
+- [ ] Hébergeur payant pro (o2switch / OVH mutualisé)
+
+### Edge / Backend serverless
+- [x] Supabase Edge Functions (déploiement, secrets, Deno/TypeScript)
+- [x] Database Webhooks Supabase (trigger sur INSERT)
+- [x] Sécurisation des secrets côté serveur (RESEND_API_KEY, NOTIFICATION_EMAIL)
+- [ ] Logs et debugging Edge Functions
+- [ ] Tests unitaires sur Edge Functions
 
 ### IA et intégrations
 - [x] Utilisation de Claude / ChatGPT comme assistant de dev
+- [x] Emails transactionnels (Resend) — bout en bout fonctionnel
+- [ ] Chatbots no-code (Chatbase) — Jour 5 à venir
 - [ ] API Claude (Anthropic SDK) en production
-- [ ] Chatbots no-code (Chatbase, Voiceflow)
 - [ ] Webhooks et automatisations (Zapier, n8n, Make)
-- [ ] Emails transactionnels (Resend, SendGrid)
 
 ### Visibilité locale (priorité après pivot)
-- [ ] Google Business Profile : création, optimisation, photos, posts
-- [ ] Gestion des avis clients (demande, réponses)
-- [ ] Référencement local basique (mots-clés "boucher halal Paris 18e")
-- [ ] Outils gratuits : Google Search Console, Google Trends
-- [ ] Compréhension du parcours client réel : qui cherche quoi, où, comment
+- [x] Google Business Profile : théorie complète (12 leviers + 3 erreurs fatales + audit 10 points)
+- [x] Méthodologie d'audit GBP en 10 points (PDF Audit-GBP.pdf)
+- [x] Compréhension du parcours client local (Local Pack, distance, notoriété)
+- [ ] Création d'une vraie fiche GBP (à faire le 17 juin sur sa propre activité)
+- [ ] Gestion pratique des avis clients (demande, réponses)
+- [ ] Google Search Console + Google Trends
+- [ ] Audits réels sur 5-10 commerces (en pratique)
 
 ### Qualité et performance
-- [ ] Lighthouse / PageSpeed Insights
-- [ ] SEO basique (meta tags, sitemap, robots.txt)
-- [ ] Accessibilité (a11y) — alt text, contraste, navigation clavier
-- [ ] Optimisation d'images (WebP, lazy loading)
+- [x] Sécurité basique : headers HTTP, RLS Supabase, env vars, anti-XSS
+- [x] Workflow GitHub Actions automatisé
+- [ ] Lighthouse / PageSpeed Insights — Jour 6
+- [ ] SEO basique (meta tags, sitemap, robots.txt) — Jour 6
+- [ ] Accessibilité (a11y) — alt text, contraste, navigation clavier — Jour 6
+- [ ] Optimisation d'images (WebP, lazy loading) — Jour 6
 - [ ] Tests manuels structurés
-- [ ] Sécurité basique (HTTPS, headers, RLS, env vars)
 
 ---
 
@@ -362,7 +401,9 @@
 - [x] Rédaction de contenus web (arguments forts en premier, punchlines, trios rythmés)
 - [x] Vocabulaire métier (vérifier avant d'écrire — ex : fournisseur ≠ certificateur)
 - [x] Orthographe cohérente sur tout un site
-- [ ] Rédaction d'un email de prospection personnalisé
+- [x] Rédaction d'un email de prospection personnalisé (4 templates dans PROSPECTION.md)
+- [x] Phone script structuré pour appel entrant
+- [x] Script de premier RDV en personne
 - [ ] Rédaction d'un devis clair et professionnel
 - [ ] Rédaction d'une facture
 - [ ] Rédaction de CGV / conditions générales
@@ -370,27 +411,33 @@
 - [ ] Présentation orale d'un projet (10 min)
 
 ### Compréhension client
-- [ ] Faire un audit gratuit d'un site existant
-- [ ] Identifier les besoins réels derrière une demande
-- [ ] Proposer 2-3 options (basique / recommandé / premium)
-- [ ] Détecter un client toxique avant signature
+- [x] Méthodologie d'audit gratuit d'une présence Google (10 points)
+- [x] Proposer 2-3 options (Pack Présence / + IA / + Suivi Clients / Sur-mesure)
+- [x] Identifier les signaux d'un client à éviter (5 critères dans PROSPECTION.md)
+- [ ] Détecter en pratique un client toxique avant signature
 - [ ] Demander un témoignage en fin de mission
 
 ### Tarification et négociation
 - [x] Comprendre la différence one-shot vs récurrent
-- [ ] Construire une grille de tarifs claire
-- [ ] Annoncer son prix sans hésiter
-- [ ] Refuser de baisser ses prix injustement
+- [x] Grille de tarifs claire construite (Tarifs.pdf, 3 phases)
+- [x] Compréhension du risque de sous-pricing (chatbot, dashboard)
+- [x] Pivot tarifaire effectué (790 / 1 090 / 1 990 €)
+- [x] Bornage de scope dans les offres (chatbot ≤ 30 Q/R, dashboard sans stats)
+- [ ] Annoncer son prix sans hésiter (à muscler en pratique)
+- [ ] Refuser de baisser ses prix injustement (à pratiquer)
 - [ ] Vendre la valeur, pas l'effort
 
 ### Gestion juridique et administrative
-- [ ] Créer sa micro-entreprise
-- [ ] Comprendre les seuils (CA, TVA, charges sociales)
+- [ ] Créer sa micro-entreprise (le 17 juin 2026)
+- [ ] Comprendre les seuils (CA, TVA, charges sociales) — formation #1 à venir
 - [ ] Déclarer son CA chaque mois/trimestre
 - [ ] Comprendre la zakat sur ses revenus pro
 
 ### Marketing
-- [ ] Construire une présence LinkedIn
+- [x] Page portfolio publique créée (portfolio.html)
+- [x] Liste de 30 prospects qualifiés (Prospects-30.pdf)
+- [x] Méthodologie complète de prospection (PROSPECTION.md)
+- [ ] Construire une présence LinkedIn pro
 - [ ] Construire une présence X (Twitter) / autres
 - [ ] Demander et publier des témoignages clients
 - [ ] Cas client : transformer un projet en étude détaillée
@@ -416,6 +463,8 @@
 
 ### Apprentissage continu
 - [x] Demander à Claude / ChatGPT au lieu de bloquer 2h sur un problème
+- [x] Croiser les avis (père développeur, autre IA sur tarifs) avant de figer une décision
+- [x] Documenter les erreurs et apprentissages dans des fichiers / PDF de référence
 - [ ] Tenir un journal des erreurs (ce qu'on a appris)
 - [ ] Lire 1 article tech sérieux par semaine
 - [ ] Faire un retour d'expérience mensuel ("qu'est-ce que j'ai appris ce mois ?")

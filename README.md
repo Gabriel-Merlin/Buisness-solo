@@ -1,169 +1,211 @@
 # Business-Solo
 
-Dépôt de travail pour le lancement de mon activité de freelance (création de sites web + outils IA pour petits commerces).
+Dépôt de travail pour le lancement de mon activité de freelance — création de sites web et outils numériques pour commerces locaux.
 
-Premier projet de démonstration : **Boucherie Al-Baraka** — site vitrine fictif pour une boucherie halal parisienne, destiné à servir de portfolio.
-
----
-
-## Objectif du projet
-
-Construire un portfolio crédible avant mes 18 ans, pour pouvoir démarrer la prospection et facturer dès la déclaration de ma micro-entreprise.
-
-Stack visée : HTML / CSS / JS, hébergement Netlify, base de données Supabase pour le formulaire de contact, chatbot FAQ (Chatbase ou API Claude).
-
-Contraintes :
-- 100 % halal (activité, modèle économique, marketing)
-- Zéro capital de départ
-- Zéro recours au crédit à intérêt (riba)
-- Service réel et identifiable, prix fixés à l'avance (pas de gharar)
+**Porteur :** Gabriel Merlin, 17 ans, en 1ʳᵉ (majorité le 17/06/2026).
+**Localisation cible :** Le Mans, Chartres et alentours (+ remote France).
+**Cadre :** 100 % halal — transparence, contrats clairs, zéro intérêt (riba), prix annoncés à l'avance.
 
 ---
 
-## État d'avancement
+## Sites déployés
 
-### Setup
-- [x] Repo GitHub créé
-- [x] Mac configuré : Git, VS Code, Command Line Tools
-- [x] Dossier de travail local : `~/Documents/Business-Solo/boucherie-al-baraka`
-- [x] Comptes Supabase et Netlify prêts
-
-### Contenu du site de démo (Jour 1 — terminé)
-- [x] Page **Accueil** : titre, sous-titre, CTA, À propos, Pourquoi nous choisir, infos pratiques
-- [x] Page **Notre viande** : intro, origine, abattage rituel, certification, traçabilité
-- [x] Page **Nos produits** : 5 catégories (bœuf, agneau, veau, volaille, spécialités maison) avec prix indicatifs
-- [x] Page **Contact** : intro, section Aïd al-Adha, coordonnées
-
-### Jour 2-3 — Structure HTML/CSS
-- [x] Arborescence du projet (`index.html`, `viande.html`, `produits.html`, `contact.html`, `assets/`)
-- [x] Design system CSS (palette vert/blanc cassé/or, typo Playfair + Inter)
-- [x] Navigation responsive (menu burger sur mobile)
-- [x] Page Accueil complète (hero, à propos, features, infos pratiques)
-- [x] Page Notre viande (intro + 4 sections + CTA)
-- [x] Page Nos produits (5 catégories avec prix)
-- [x] Page Contact (formulaire + infos + encart Aïd)
-- [x] Footer global cohérent sur les 4 pages
-- [x] Config Netlify (`netlify.toml`) + `.gitignore`
-- [ ] Déploiement sur Netlify (à faire côté interface web)
-
-### Jour 4 — Supabase
-- [x] Projet Supabase créé (`csspxsnqobftispxvnmw`)
-- [x] Table `contact_submissions` (name, email, phone, subject, message)
-- [x] RLS activé + policy `Allow anonymous inserts` (role anon, INSERT only)
-- [x] Formulaire de contact câblé via l'API REST Supabase
-- [x] Gestion des états (envoi en cours, succès, erreur) + reset du formulaire
-
-### À faire
-- [ ] Jour 5 : intégration chatbot FAQ
-- [ ] Jour 6 : polish (responsive mobile, SEO, performance)
-- [ ] Jour 7 : README projet final + captures + mise en valeur
+- **Démo Boucherie Al-Baraka** (vitrine fictive halal) : https://gabriel-merlin.github.io/Buisness-solo/
+- **Portfolio personnel** (offre commerciale) : https://gabriel-merlin.github.io/Buisness-solo/portfolio.html
 
 ---
 
-## Lancer le site en local (sur Mac)
+## Arborescence du repo
+
+```
+Buisness-solo/
+├── README.md                       # Ce fichier — vue d'ensemble
+├── ETAPES.md                       # Carte d'apprentissage et progression
+├── PROSPECTION.md                  # Méthodologie + 4 templates email + scripts RDV
+├── prospects-template.csv          # Template Google Sheets pour suivi prospects
+│
+├── index.html                      # Démo Boucherie : Accueil
+├── viande.html                     # Démo Boucherie : Notre viande
+├── produits.html                   # Démo Boucherie : Nos produits (5 catégories)
+├── contact.html                    # Démo Boucherie : Contact + formulaire Supabase
+├── portfolio.html                  # Portfolio personnel Gabriel Merlin
+│
+├── assets/
+│   ├── css/
+│   │   ├── styles.css              # Design system Al-Baraka (vert/blanc/or)
+│   │   └── portfolio.css           # Design portfolio (slate/blanc/bleu sobre)
+│   ├── js/
+│   │   └── script.js               # Menu mobile + formulaire Supabase
+│   └── img/                        # Images locales (à enrichir Jour 6)
+│
+├── supabase/
+│   └── functions/
+│       └── send-contact-notification/
+│           └── index.ts            # Edge Function : email auto via Resend
+│
+├── .github/
+│   └── workflows/
+│       └── pages.yml               # CI/CD : déploiement auto sur GitHub Pages
+│
+├── netlify.toml                    # Config Netlify (alternative à GH Pages)
+├── .nojekyll                       # Désactive Jekyll sur GH Pages
+└── .gitignore                      # Ignore .DS_Store, .env, etc.
+```
+
+---
+
+## Documents PDF de référence (sauvegarder en local)
+
+Ces PDFs ne sont pas dans le repo (ils sont régénérés à la demande) mais constituent la mémoire du projet :
+
+| PDF | Contenu | Usage |
+|---|---|---|
+| `Consignes-pages-boucherie.pdf` | Trame rédactionnelle pour les 4 pages | Référence quand tu rédiges du contenu pour un site |
+| `Tarifs.pdf` | Grille tarifaire 3 phases + règles + offre standard | Référence interne pour devis |
+| `Questions-pere.pdf` | 34 questions à poser au père développeur (8 thèmes) | À utiliser en 2-3 sessions |
+| `Recap-business.pdf` | Synthèse complète du projet (8 sections) | Document vivant, mis à jour à chaque session |
+| `Audit-GBP.pdf` | Méthodologie d'audit Google Business Profile en 10 points | Outil de vente avec les prospects |
+| `Prospects-30.pdf` | 30 commerces sans site (Le Mans + Chartres) | Liste de départ pour la prospection |
+
+---
+
+## État actuel
+
+### ✅ Terminé
+
+**Setup**
+- Compte GitHub + repo public + GitHub Pages activé
+- Mac configuré (Git, VS Code, Command Line Tools)
+- Compte Supabase + Netlify + Resend + Outlook pro (`gabriel.merlin.pro@outlook.fr`)
+
+**Démo Boucherie Al-Baraka (Jours 1-4 + 7)**
+- Contenu rédactionnel des 4 pages
+- Design system CSS (vert / blanc cassé / or, Playfair + Inter)
+- 4 pages HTML responsive avec navigation mobile burger
+- Formulaire de contact connecté à Supabase (table `contact_submissions` + policy RLS)
+- Notifications email via Edge Function Supabase + Resend (bout en bout)
+- Workflow GitHub Actions automatique
+- Google Business Profile : théorie complète + outil d'audit en 10 points
+
+**Portfolio personnel**
+- Page `portfolio.html` en ligne, palette sobre (slate/blanc/bleu)
+- 3 packages tarifaires + offre sur-mesure
+- Formulaire de contact réutilisant Supabase
+- Email pro Outlook intégré
+
+**Préparation prospection (Phase 1.75)**
+- Méthodologie + 4 templates d'email + scripts (PROSPECTION.md)
+- Liste de 30 prospects qualifiés (Le Mans + Chartres + banlieues)
+- Template CSV pour Google Sheets
+
+### 🟡 En cours / à finir
+
+**Démo Boucherie — sessions restantes**
+- Jour 5 — Chatbot FAQ (Chatbase, 20-25 Q/R) ← **prochaine session**
+- Jour 6 — Polish (favicon, SEO, image hero locale, Lighthouse)
+- Jours 8-10 — Mini-dashboard admin (Supabase Auth + CRUD + export CSV)
+
+**Préparation prospection — manque**
+- Audits GBP des 30 prospects (5 par jour × 6 jours)
+- Téléphone à compléter sur portfolio
+- Profil LinkedIn pro à créer
+
+### ⏳ À venir
+
+- **Phase 1.5** — Projet pilote gratuit : **site anti-harcèlement pour le lycée de la sœur** (sujet validé)
+- **Phase 2** — Démos n°2 et n°3 (à choisir : coach sportif, restaurant, autre)
+- **Phase 4** — Déclaration micro-entreprise (le 17/06/2026) + prospection active
+- **Phase 5** — Modèle retainer (60-90 €/mois × 10 clients = revenu passif)
+
+---
+
+## Offre commerciale (Phase 1)
+
+| Pack | Tarif | Contenu |
+|---|---|---|
+| **Présence Locale** | 790 € | Site 4 pages + GBP + email notif + hébergement 1 an |
+| **+ Assistant IA** | 1 090 € | + chatbot FAQ (max 30 Q/R, scope strict) |
+| **+ Suivi Clients** | 1 990 € | + espace admin (login, marquage traité, export CSV) |
+| **Sur-mesure** | Dès 2 500 € | Plateformes, intégrations avancées, multi-utilisateurs |
+| **Maintenance mensuelle** | 70 €/mois | Hébergement, sauvegardes, support 48 h, 1-2 modifs/mois |
+
+**Règle prudence :** ne pas vendre le Pack Suivi Clients avant d'avoir construit son premier dashboard en interne (sur la démo Boucherie ou un projet pilote).
+
+---
+
+## Stack technique
+
+| Couche | Outil | Coût |
+|---|---|---|
+| Code | HTML5 / CSS3 / JavaScript vanilla | 0 € |
+| Versioning | Git + GitHub | 0 € (repo public) |
+| Hébergement | GitHub Pages | 0 € |
+| Domaine perso | (à acheter) | ~12 €/an |
+| Base de données | Supabase (PostgreSQL + RLS) | Plan gratuit |
+| Auth | Supabase Auth (Jours 8-10) | Plan gratuit |
+| Serverless | Supabase Edge Functions (Deno) | Plan gratuit |
+| Emails transactionnels | Resend | Gratuit jusqu'à 3 000 emails/mois |
+| Chatbot | Chatbase (Jour 5) | Plan gratuit |
+| Éditeur | VS Code | 0 € |
+| CI/CD | GitHub Actions | 0 € (repo public) |
+
+---
+
+## Cadre éthique islamique
+
+**Refusé :** alcool, porc, jeux, prostitution, drogue, finance à intérêts (riba), tromperie commerciale, faux avis, manipulation marketing, dropshipping mensonger, contenus haram.
+
+**Engagements :**
+- Prix annoncé = prix tenu (pas de surfacturation a posteriori)
+- Honnêteté sur le scope et les délais
+- Contrats clairs (devis écrit avant tout engagement)
+- Pas de gharar (incertitude excessive)
+- Zakat à calculer sur les économies nettes une fois le nissab atteint
+- Refuser un client haram, même tentant — la baraka prime sur le chiffre
+
+---
+
+## Roadmap personnelle (rappel)
+
+- **17/06/2026** — 18 ans + déclaration micro-entreprise
+- **23/06/2026** — Fin du bac de français + math
+- **24/06 → 03/08** — 6 semaines plein temps : finir démo + projet pilote sœur + prospection
+- **Sept 2026 → juin 2027** — Terminale : 15-20 h/sem en parallèle, 1-2 clients/mois
+- **Juin 2027** — Bac
+- **Sept 2027 → juin 2029** — 2 ans de prépa (mode survie business, 4-5h/sem max)
+- **Mai-juin 2029** — Concours grandes écoles
+- **Sept 2029** — Entrée en école de commerce (objectif : 32 k€ accumulés)
+
+**Objectif financier 3 ans :** 32 k€ net avant école de commerce (faisable via mix Business Solo + retainers cumulés + bourses + alternance si possible).
+
+---
+
+## Projet parallèle
+
+**QuickFix.IA** — marketplace d'urgence domestique en cofondation 50/50 avec Matys Donat. MVP complet, prêt à lancer (Stripe live, Supabase, Resend, multilingue). Documenté à part. Statut du partenariat à clarifier (voir conversation Claude pour le cadre).
+
+---
+
+## Stratégie hosting recommandée
+
+- **Démos personnelles** (Boucherie, portfolio, sœur) : GitHub Pages gratuit
+- **Premiers clients** : domaine à 12 €/an + GitHub Pages / Netlify (refacturer le domaine)
+- **Clients exigeants ou Phase 2-3** : hébergeur payant français (o2switch ~7 €/mois ou OVH ~3 €/mois mutualisé)
+
+> *« Pour un professionnel, payer un hébergeur est mieux. »* — conseil du père, à appliquer dès le premier vrai client.
+
+---
+
+## Comment reprendre le travail à distance
 
 ```bash
 cd ~/Documents/Business-Solo/boucherie-al-baraka
-git pull origin claude/pensive-hawking-bqLER
+git pull origin main
 code .
 ```
 
-Dans VS Code, ouvre `index.html`, clic droit → **Open with Live Server**.
-Le site s'ouvre sur `http://127.0.0.1:5500` avec rechargement automatique à chaque modification.
+Dans VS Code : clic droit sur `index.html` → **Open with Live Server**.
 
----
+Pour modifier le portfolio : clic droit sur `portfolio.html` → **Open with Live Server**.
 
-## Identité du site fictif
-
-- **Nom** : Boucherie Al-Baraka
-- **Famille** : Def Djebbar
-- **Création** : 2015
-- **Adresse fictive** : 52 rue Marx Dormoy, 75018 Paris
-- **Téléphone fictif** : 01 47 35 99 12
-- **Angle fort** : sacrifices de l'Aïd al-Adha avec vidéo sur demande
-
----
-
-## Contenus rédigés (Jour 1)
-
-### Accueil
-
-**Titre** : La Boucherie Al-Baraka — Boucherie halal artisanale à Paris
-**Sous-titre** : Viandes sélectionnées avec exigence, abattage rituel, savoir-faire familial depuis 2015
-**CTA principal** : Découvrir nos produits
-
-**À propos** :
-> Fondée en 2015 par la famille Def Djebbar, la Boucherie Al-Baraka est née d'une conviction : offrir aux musulmans de Paris une viande halal dans laquelle ils peuvent avoir une confiance totale. Nos viandes viennent exclusivement du terroir français, issues d'éleveurs sélectionnés et abattues selon le rite. Année après année, nous accompagnons aussi de nombreuses familles dans leur sacrifice de l'Aïd al-Adha — une responsabilité que nous prenons avec rigueur. Pousser notre porte, c'est retrouver un geste artisanal et le conseil d'un maître-boucher qui est heureux de vous accueillir tous les matins.
-
-**Pourquoi nous choisir** :
-- Halal certifié — Abattage rituel respecté, fournisseurs de confiance
-- Fraîcheur quotidienne — Arrivages chaque matin, jamais de surgelé
-- Conseil de boucher — Un expert vous guide selon vos besoins
-- Service de quartier — Livraison locale et commandes sur mesure
-
-**Horaires** :
-- Lundi : fermé
-- Mardi–Samedi : 8h–13h / 15h–19h30
-- Dimanche : 8h–13h
-
-### Notre viande
-
-**Introduction** :
-> Chez Al-Baraka, chaque pièce de viande raconte une histoire — celle d'un éleveur, d'un savoir-faire transmis depuis dix ans, et d'une exigence sans compromis. Voici ce qui se cache derrière ce que nous mettons en vitrine.
-
-**L'origine** :
-> Nous connaissons personnellement chacun de nos fournisseurs — certains nous livrent depuis dix ans. Toutes nos viandes viennent exclusivement du terroir français, sélectionnées chez des éleveurs reconnus pour leur exigence : bœuf charolais du Limousin, agneau du Quercy, veau de l'Aveyron, volailles fermières d'Auvergne. Aucun de nos fournisseurs n'est anonyme.
-
-**L'abattage rituel** :
-> L'ensemble de nos produits sont issus d'abattoirs certifiés halal. Le sacrificateur musulman prononce la formule rituelle, l'animal est conscient au moment du sacrifice et la saignée est complète. Voici les conditions non négociables de notre engagement.
-
-**La certification** :
-> Tous nos fournisseurs sont contrôlés par des organismes de certification halal indépendants. Les certificats correspondants sont consultables en boutique sur simple demande. La transparence est indispensable pour nous.
-
-**La traçabilité** :
-> Chaque pièce vendue est traçable jusqu'à son éleveur. Si vous souhaitez connaître précisément l'origine d'un produit, demandez-nous : la réponse ne prend que quelques secondes.
-
-### Nos produits
-
-**Introduction** :
-> Sélection rigoureuse, fraîcheur quotidienne, préparation maison : voici ce que vous trouverez chaque jour dans notre vitrine.
-
-**Catégories** :
-
-| Catégorie | Origine | Produits phares (prix à partir de) |
-|---|---|---|
-| Bœuf | Charolais du Limousin, maturation soignée | Entrecôte 28 €/kg · Faux-filet 26 €/kg · Bavette 22 €/kg · Bourguignon 18 €/kg · Steak haché frais 16 €/kg |
-| Agneau | Quercy, élevage extensif | Gigot entier 24 €/kg · Côtelettes 28 €/kg · Épaule 20 €/kg · Découpe tagine 19 €/kg |
-| Veau | Aveyron, élevage sous la mère | Escalope 26 €/kg · Rôti 24 €/kg · Blanquette 20 €/kg · Côte 28 €/kg |
-| Volaille | Fermière, plein air | Poulet entier 14 €/kg · Cuisses 12 €/kg · Filets 18 €/kg · Dinde 16 €/kg |
-| Spécialités maison | Préparées chaque matin | Merguez 18 €/kg · Kefta 17 €/kg · Chich taouk mariné 19 €/kg · Brochettes 20 €/kg |
-
-> Les prix peuvent varier selon les arrivages. N'hésitez pas à nous appeler au 01 47 35 99 12 pour confirmer la disponibilité.
-
-### Contact
-
-**Introduction** :
-> Une question, une commande, un événement à organiser ? Écrivez-nous, appelez-nous, ou passez nous voir en boutique — nous prenons toujours le temps de vous répondre.
-
-**Commandes pour l'Aïd al-Adha** :
-> Pour vos commandes de l'Aïd al-Adha, nous prenons les réservations jusqu'à deux mois à l'avance. Contactez-nous au plus tôt pour réserver votre bête et définir avec nous les modalités du sacrifice. Sur demande, nous vous envoyons une vidéo du sacrifice effectué en votre nom — une garantie supplémentaire pour ceux qui ne peuvent pas être présents.
-
-**Coordonnées** :
-- 52 rue Marx Dormoy, 75018 Paris
-- 01 47 35 99 12
-- contact@boucherie-al-baraka.fr (fictif)
-- Horaires : voir page Accueil
-
----
-
-## Notes de méthode (à garder en tête pour la suite)
-
-Principes de rédaction validés pendant le Jour 1 :
-- Les arguments forts en premier (le lecteur scanne, ne lit pas)
-- Le concret bat toujours le générique (races, terroirs, dates précises)
-- Une punchline finale courte par section ("Aucun de nos fournisseurs n'est anonyme.")
-- Trios rythmés ("éleveur, savoir-faire, exigence")
-- Verbes forts plutôt qu'adjectifs mous
-- Pas de points d'exclamation sur un site pro
-- Orthographe cohérente sur tout le site (ex : *Aïd al-Adha*, jamais panaché)
-- Vérifier le vocabulaire métier avant de rédiger (ex : fournisseur ≠ organisme de certification)
+Tout commit sur `main` déclenche automatiquement un redéploiement GitHub Pages (visible dans l'onglet Actions du repo, ~1-2 min).
