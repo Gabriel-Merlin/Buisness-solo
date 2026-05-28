@@ -20,6 +20,22 @@
 
 ---
 
+## Pivot tarifaire (suite au retour d'une IA tierce sur les risques économiques)
+
+**Constat** : la grille initiale (790 / 990 / 1 490 €) sous-pricait gravement le dashboard admin et ne cadrait pas assez le scope du chatbot. Risque de pertes économiques sur les packs 2 et 3.
+
+**Structure révisée Phase 1 :**
+- **Pack Présence Locale — 790 €** (site + GBP + email notification)
+- **Pack + Assistant IA — 1 090 €** (+ chatbot avec scope strict : ≤ 30 Q/R, données fournies par le client)
+- **Pack Suivi Clients — 1 990 €** (+ espace admin avec login, marquage, export CSV)
+- **Sur-mesure — dès 2 500 €** (plateformes, intégrations avancées)
+
+**Règle de prudence** : ne pas vendre le Pack Suivi Clients avant d'avoir construit son premier dashboard en interne (sur la démo Boucherie ou un projet pilote).
+
+**Sur l'hébergement** : pour les vrais clients, **toujours acheter un nom de domaine** (~12 €/an refacturable). L'hébergement peut rester gratuit (Netlify/GitHub) techniquement, mais la perception client demande un domaine pro. Pour les clients exigeants ou en Phase 2-3 : passage à un hébergeur payant (o2switch ~7 €/mois, OVH ~3 €/mois).
+
+---
+
 ## Sommaire
 
 1. [Vue d'ensemble](#vue-densemble)
