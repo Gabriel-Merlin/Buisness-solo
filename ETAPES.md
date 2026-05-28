@@ -168,7 +168,7 @@
 - [x] Routine quotidienne de prospection définie
 - [x] Liste de 30 prospects identifiés (Le Mans + Chartres, PDF `Prospects-30.pdf`)
 - [x] Page portfolio publique créée (`portfolio.html`)
-- [x] Email pro créé : gabriel.merlin.pro@outlook.com
+- [x] Email pro créé : gabriel.merlin.pro@outlook.fr
 - [ ] Téléphone à compléter sur la page portfolio avant publication
 - [ ] Audits GBP des 30 prospects (5 par jour pendant 6 jours)
 - [ ] Profil LinkedIn pro finalisé
