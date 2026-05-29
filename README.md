@@ -23,6 +23,7 @@ Buisness-solo/
 ├── ETAPES.md                       # Carte d'apprentissage et progression
 ├── PROSPECTION.md                  # Méthodologie + 4 templates email + scripts RDV
 ├── CHATBASE-PLANS.md               # Grille des plans Chatbase + décision par client
+├── COURS-MICRO-ENTREPRISE.md       # Cours complet 13 sections + 10 cas pratiques
 ├── prospects-template.csv          # Template Google Sheets pour suivi prospects
 │
 ├── index.html                      # Démo Boucherie : Accueil
@@ -30,14 +31,19 @@ Buisness-solo/
 ├── produits.html                   # Démo Boucherie : Nos produits (5 catégories)
 ├── contact.html                    # Démo Boucherie : Contact + formulaire Supabase
 ├── portfolio.html                  # Portfolio personnel Gabriel Merlin
+├── sitemap.xml                     # Sitemap XML (5 URLs avec priorités)
+├── robots.txt                      # Allow all + référence sitemap
 │
 ├── assets/
 │   ├── css/
 │   │   ├── styles.css              # Design system Al-Baraka (vert/blanc/or)
 │   │   └── portfolio.css           # Design portfolio (slate/blanc/bleu sobre)
 │   ├── js/
-│   │   └── script.js               # Menu mobile + formulaire Supabase
-│   └── img/                        # Images locales (à enrichir Jour 6)
+│   │   ├── script.js               # Menu mobile + formulaire Supabase
+│   │   └── chatbase-lazy.js        # Lazy-load Chatbase widget (perf mobile)
+│   └── img/
+│       ├── favicon-boucherie.svg   # Favicon Al-Baraka (A or sur fond vert)
+│       └── favicon-portfolio.svg   # Favicon portfolio (GM blanc sur fond slate)
 │
 ├── supabase/
 │   └── functions/
@@ -67,6 +73,7 @@ Ces PDFs ne sont pas dans le repo (ils sont régénérés à la demande) mais co
 | `Recap-business.pdf` | Synthèse complète du projet (8 sections) | Document vivant, mis à jour à chaque session |
 | `Audit-GBP.pdf` | Méthodologie d'audit Google Business Profile en 10 points | Outil de vente avec les prospects |
 | `Prospects-30.pdf` | 30 commerces sans site (Le Mans + Chartres) | Liste de départ pour la prospection |
+| `Cours-Micro-Entreprise.pdf` | Cours complet 13 sections + 10 cas pratiques + annexe | À lire en 3 passes avant le 17/06/2026 |
 
 ---
 
@@ -77,46 +84,58 @@ Ces PDFs ne sont pas dans le repo (ils sont régénérés à la demande) mais co
 **Setup**
 - Compte GitHub + repo public + GitHub Pages activé
 - Mac configuré (Git, VS Code, Command Line Tools)
-- Compte Supabase + Netlify + Resend + Outlook pro (`gabriel.merlin.pro@outlook.fr`)
+- Compte Supabase + Netlify + Resend + Chatbase + Outlook pro (`gabriel.merlin.pro@outlook.fr`)
 
-**Démo Boucherie Al-Baraka (Jours 1-4 + 7)**
+**Démo Boucherie Al-Baraka — Jours 1 à 7 terminés**
 - Contenu rédactionnel des 4 pages
 - Design system CSS (vert / blanc cassé / or, Playfair + Inter)
-- 4 pages HTML responsive avec navigation mobile burger
+- 4 pages HTML responsive avec navigation mobile burger (bouton "Menu" + X animation)
 - Formulaire de contact connecté à Supabase (table `contact_submissions` + policy RLS)
-- Notifications email via Edge Function Supabase + Resend (bout en bout)
+- Notifications email via Edge Function Supabase + Resend (bout en bout testé)
+- Chatbot FAQ Chatbase intégré (24 paires Q/R, lazy-load pour perf mobile)
+- SEO complet : meta tags, Open Graph, Twitter Card, JSON-LD (Store + LocalBusiness)
+- sitemap.xml + robots.txt
+- Favicons SVG (Boucherie + portfolio)
+- Accessibilité : skip-link, focus visible, heading order correct, contraste WCAG AA
 - Workflow GitHub Actions automatique
 - Google Business Profile : théorie complète + outil d'audit en 10 points
+- **PageSpeed Desktop** : 100 / 100 / 100 / 100
+- **PageSpeed Mobile** : 92 / 95 / 100 / 100 (perf / a11y / bonnes pratiques / SEO)
 
 **Portfolio personnel**
 - Page `portfolio.html` en ligne, palette sobre (slate/blanc/bleu)
-- 3 packages tarifaires + offre sur-mesure
+- 3 packages tarifaires (790 / 1 090 / 1 990 €) + offre sur-mesure
 - Formulaire de contact réutilisant Supabase
-- Email pro Outlook intégré
+- Email pro Outlook intégré, favicon dédié
 
 **Préparation prospection (Phase 1.75)**
 - Méthodologie + 4 templates d'email + scripts (PROSPECTION.md)
 - Liste de 30 prospects qualifiés (Le Mans + Chartres + banlieues)
 - Template CSV pour Google Sheets
 
+**Formation #1 — Micro-entreprise**
+- Cours complet rédigé (COURS-MICRO-ENTREPRISE.md + PDF)
+- 13 sections : statut, déclaration, facturation, URSSAF, seuils TVA, halal, pièges
+- 10 cas pratiques avec corrections détaillées
+- Quick reference + vocabulaire en annexe
+
 ### 🟡 En cours / à finir
 
-**Démo Boucherie — sessions restantes**
-- Jour 5 — Chatbot FAQ (Chatbase, 20-25 Q/R) ← **prochaine session**
-- Jour 6 — Polish (favicon, SEO, image hero locale, Lighthouse)
-- Jours 8-10 — Mini-dashboard admin (Supabase Auth + CRUD + export CSV)
+**Démo Boucherie — il reste :**
+- Jours 8-10 — Mini-dashboard admin (Supabase Auth + CRUD + export CSV) → débloque le Pack 1 990 €
 
-**Préparation prospection — manque**
+**Préparation prospection — manque :**
 - Audits GBP des 30 prospects (5 par jour × 6 jours)
 - Téléphone à compléter sur portfolio
 - Profil LinkedIn pro à créer
 
 ### ⏳ À venir
 
-- **Phase 1.5** — Projet pilote gratuit : **site anti-harcèlement pour le lycée de la sœur** (sujet validé)
+- **Phase 1.5** — Projet pilote gratuit : **site anti-harcèlement pour le lycée de la sœur** (sujet validé, cadrage à faire)
 - **Phase 2** — Démos n°2 et n°3 (à choisir : coach sportif, restaurant, autre)
-- **Phase 4** — Déclaration micro-entreprise (le 17/06/2026) + prospection active
+- **Phase 4** — Déclaration micro-entreprise (le 17/06/2026) + prospection active dès le 24/06
 - **Phase 5** — Modèle retainer (60-90 €/mois × 10 clients = revenu passif)
+- **Formations restantes** : Rédaction commerciale, GBP avancé, Cybersécurité, CSS/HTML avancé, JS moderne, Git avancé
 
 ---
 
