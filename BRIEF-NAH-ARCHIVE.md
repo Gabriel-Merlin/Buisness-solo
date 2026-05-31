@@ -1,4 +1,16 @@
-# BRIEF-NAH — Projet site « Non Au Harcèlement » (Lycée Marceau, Chartres)
+# BRIEF-NAH — ARCHIVE (cadrage initial)
+
+> ⚠️ **Document archivé** — rédigé le 28/05/2026 comme cadrage initial.
+> Le projet a été développé bien au-delà de ce brief.
+>
+> **Repo officiel** : https://github.com/Gabriel-Merlin/NAH
+> **URL publique** : https://gabriel-merlin.github.io/NAH/
+>
+> Document conservé pour mémoire de la vision de départ.
+
+---
+
+## BRIEF-NAH — Projet site « Non Au Harcèlement » (Lycée Marceau, Chartres)
 
 > Document de cadrage et prompt prêt à utiliser pour un nouveau projet.
 > Sœur de Gabriel = porteuse de projet · Lycée Marceau, Chartres (28) · 2026.

@@ -12,6 +12,7 @@ Dépôt de travail pour le lancement de mon activité de freelance — création
 
 - **Démo Boucherie Al-Baraka** (vitrine fictive halal) : https://gabriel-merlin.github.io/Buisness-solo/
 - **Portfolio personnel** (offre commerciale) : https://gabriel-merlin.github.io/Buisness-solo/portfolio.html
+- **NAH — Non Au Harcèlement** (1er vrai client, projet pilote livré) : https://gabriel-merlin.github.io/NAH/ — *en attente de validation Lycée Marceau*
 
 ---
 
@@ -24,6 +25,7 @@ Buisness-solo/
 ├── PROSPECTION.md                  # Méthodologie + 4 templates email + scripts RDV
 ├── CHATBASE-PLANS.md               # Grille des plans Chatbase + décision par client
 ├── COURS-MICRO-ENTREPRISE.md       # Cours complet 13 sections + 10 cas pratiques
+├── BRIEF-NAH-ARCHIVE.md            # Cadrage initial du projet sœur (archive)
 ├── prospects-template.csv          # Template Google Sheets pour suivi prospects
 │
 ├── index.html                      # Démo Boucherie : Accueil
@@ -129,9 +131,14 @@ Ces PDFs ne sont pas dans le repo (ils sont régénérés à la demande) mais co
 - Téléphone à compléter sur portfolio
 - Profil LinkedIn pro à créer
 
+**Phase 1.5 — Projet pilote NAH (livré, en attente validation lycée)**
+- 1er vrai projet livré : site anti-harcèlement pour Lou-Ann Merlin (sœur), Lycée Marceau Chartres
+- 11 pages, Supabase Auth (Google + email), Edge Functions, RLS, tableau de bord admin, système de candidatures avec tirage au sort, transfert d'administration
+- Repo séparé : https://github.com/Gabriel-Merlin/NAH
+- En attente du RDV avec le personnel du lycée pour validation officielle
+
 ### ⏳ À venir
 
-- **Phase 1.5** — Projet pilote gratuit : **site anti-harcèlement pour le lycée de la sœur** (sujet validé, cadrage à faire)
 - **Phase 2** — Démos n°2 et n°3 (à choisir : coach sportif, restaurant, autre)
 - **Phase 4** — Déclaration micro-entreprise (le 17/06/2026) + prospection active dès le 24/06
 - **Phase 5** — Modèle retainer (60-90 €/mois × 10 clients = revenu passif)

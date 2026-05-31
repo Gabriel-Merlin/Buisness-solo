@@ -184,33 +184,42 @@
 
 ---
 
-## Phase 1.5 — Projet pilote gratuit (avant les 18 ans)
+## Phase 1.5 — Projet pilote gratuit ✅ (livré, en attente de validation lycée)
 
 > Stratégie validée : faire un site gratuit pour un proche, avant la déclaration en micro-entreprise. Avant les 18 ans, c'est légal car aucune rémunération n'est échangée. Objectif : tester les compétences en conditions réelles, gagner un témoignage, arriver à la déclaration avec un cas concret à montrer.
 
-**Option retenue : site anti-harcèlement pour le lycée de la sœur de Gabriel.**
+**Projet réalisé : site NAH (Non Au Harcèlement) pour le Lycée Marceau de Chartres.**
 
-Avantages vs le restaurateur : client connu (sœur), sujet à fort impact social (différent du commercial pur), cas client institutionnel = diversité du portfolio, formation à la rédaction sensible et à l'accessibilité.
+- **Repo** : https://github.com/Gabriel-Merlin/NAH
+- **URL publique** : https://gabriel-merlin.github.io/NAH/
+- **Porteuse** : Lou-Ann Merlin (sœur, lycéenne au Lycée Marceau)
+- **Statut** : développement terminé, en attente de validation par le personnel du lycée
 
-### Cadrage à valider avec la sœur (avant tout code)
-- [ ] Qui pilote le projet (sœur seule / prof / asso lycéenne) ?
-- [ ] Périmètre : page informative / multi-pages / formulaire de signalement ?
-- [ ] Le lycée valide-t-il (hébergement officiel possible) ?
-- [ ] Niveau de sensibilité des infos (RGPD si formulaire de signalement) ?
-- [ ] Deadline (fin d'année scolaire ou rentrée) ?
+### Surface livrée (très au-delà du brief initial)
+- [x] 11 pages : Accueil, Comprendre, Agir & Outils, Nous rejoindre, Contact, Espace équipe, Administration, Activation lien, Transfert admin, Mentions légales, Confidentialité
+- [x] Palette dédiée : bleu doux + vert + bordeaux + gris-bleu
+- [x] Stack : HTML/CSS/JS vanilla + Supabase (Auth Google + email/mdp) + Resend + GitHub Pages
+- [x] Authentification double : Google OAuth + email/mot de passe
+- [x] Système candidatures + sélection (manuelle ou tirage au sort)
+- [x] Email de bienvenue automatique avec lien d'activation à usage unique
+- [x] Tableau de bord admin (stats, gestion membres, configuration places)
+- [x] Système de transfert d'administration par lien temporaire 72h
+- [x] Row Level Security + fonctions RPC + Edge Functions
+- [x] Question anonyme, sondage, calendrier, signalement
+- [x] Protection anti-lockout du dernier admin
+- [x] Conservation des données 6 mois (RGPD)
+- [x] Tableau de bord administrateur
+- [x] Mentions légales + politique de confidentialité
 
-### Construction
-- [ ] Cadrage écrit signé (scope, durée, contreparties = témoignage + droit portfolio)
-- [ ] Rédaction du contenu (avec ou via la sœur)
-- [ ] Maquette validée par la sœur avant code
-- [ ] Construction HTML/CSS (réutilise le design system, mais palette adaptée au sujet sensible — pas de vert/or commercial)
-- [ ] Formulaire de signalement si retenu (RLS Supabase stricte, anonymat respecté)
-- [ ] Accessibilité WCAG basique (alt text, contraste, navigation clavier)
-- [ ] Tests par 3-5 lycéens avant livraison
-- [ ] Livraison + petit document récapitulatif
-- [ ] Témoignage écrit obtenu (sœur + idéalement prof référent)
-- [ ] Photos avant/après pour le portfolio
-- [ ] Limites posées dès le début : pas de maintenance gratuite illimitée
+### Reste à valider (côté lycée)
+- [ ] RDV avec le personnel du lycée (planifié)
+- [ ] Validation officielle du projet par le chef d'établissement
+- [ ] Coordonnées des personnes-ressources à intégrer (CPE, infirmière, prof référent)
+- [ ] Email dédié définitif (remplacer `lou.ann.merlin@gmail.com` par un email NAH dédié)
+- [ ] Comptes réseaux sociaux à créer
+- [ ] Photo du lycée Marceau (autorisation chef d'établissement requise)
+- [ ] Statut officiel à clarifier dans les mentions légales
+- [ ] Témoignage écrit à demander en retour pour le portfolio Gabriel
 
 ---
 
