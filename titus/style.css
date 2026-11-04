@@ -142,3 +142,17 @@ footer{text-align:center;padding:36px 16px 100px;border-top:1px solid var(--line
 .maplink{display:block;margin-top:20px;padding:22px;border:1px solid var(--line);border-radius:6px;text-align:center;font:500 14px Inter,sans-serif;letter-spacing:.06em}
 .maplink:hover{background:var(--card)}
 @media(max-width:760px){.panelbox{padding:24px 20px}}
+
+.rev-top{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;margin:28px 0 8px}
+.rev-top .rating{align-items:flex-start;margin:0}
+.rev-top .bars{margin:0;max-width:none;width:100%}
+.bars p{grid-template-columns:44px 1fr 40px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.quotes.three{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;flex-direction:column;gap:12px;margin:0}
+.quote .stars{color:var(--g);letter-spacing:3px;font-size:15px}
+.quote blockquote{margin:0;flex:1;font-size:17px;line-height:1.55}
+.quote figcaption{color:var(--mut);font-size:13px}
+.quote figcaption b{color:var(--ink);font-weight:600}
+.band .quote{background:var(--bg)}
+@media(max-width:700px){.rev-top{grid-template-columns:1fr;gap:20px}}
