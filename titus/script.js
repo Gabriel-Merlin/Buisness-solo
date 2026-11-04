@@ -13,3 +13,12 @@
   tabs.forEach(function(b,i){b.addEventListener('click',function(){show(b)});b.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(n){var t=tabs[(i+n+tabs.length)%tabs.length];t.focus();show(t);}});});
   show(tabs[0]);
 })();
+
+(function(){
+  var b=document.getElementById('burger'),d=document.getElementById('drawer');if(!b||!d)return;
+  function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');d.hidden=!o;}
+  b.addEventListener('click',function(){set(d.hidden)});
+  d.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;set(false);var t=a.getAttribute('data-tab');if(t)document.getElementById(t).click();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  window.addEventListener('resize',function(){if(innerWidth>900)set(false)});
+})();

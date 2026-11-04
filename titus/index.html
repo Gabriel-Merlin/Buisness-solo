@@ -33,7 +33,20 @@
   <nav aria-label="Navigation principale">
     <a href="#carte">La carte</a><a href="#avis">Avis</a><a href="#infos">Infos</a>
   </nav>
-  <a class="btn btn-small" href="tel:+33237230434">📞 Appeler</a>
+  <a class="btn btn-small call" href="tel:+33237230434">📞 Appeler</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <div class="drawer" id="drawer" hidden>
+    <p class="d-title">La carte</p>
+    <a href="#carte" data-tab="t-menus">Sandwichs</a>
+    <a href="#carte" data-tab="t-burgers">Burgers</a>
+    <a href="#carte" data-tab="t-assiettes">Assiettes</a>
+    <a href="#carte" data-tab="t-barquettes">Barquettes</a>
+    <a href="#carte" data-tab="t-extras">Desserts &amp; boissons</a>
+    <p class="d-title">Le restaurant</p>
+    <a href="#avis">Avis</a>
+    <a href="#infos">Horaires &amp; accès</a>
+    <a class="d-call" href="tel:+33237230434">Appeler le 02 37 23 04 34</a>
+  </div>
 </header>
 
 <main>
