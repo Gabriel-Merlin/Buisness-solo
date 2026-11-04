@@ -63,14 +63,15 @@
 <section id="carte" class="sec">
   <h2><small>La</small>Carte</h2>
   <div class="tabs" role="tablist" aria-label="Catégories de la carte">
-    <button role="tab" id="t-menus" aria-controls="p-menus" aria-selected="true">Menus</button>
+    <button role="tab" id="t-menus" aria-controls="p-menus" aria-selected="true">Sandwichs</button>
+    <button role="tab" id="t-burgers" aria-controls="p-burgers" aria-selected="false">Burgers</button>
     <button role="tab" id="t-assiettes" aria-controls="p-assiettes" aria-selected="false">Assiettes</button>
     <button role="tab" id="t-barquettes" aria-controls="p-barquettes" aria-selected="false">Barquettes</button>
     <button role="tab" id="t-extras" aria-controls="p-extras" aria-selected="false">Desserts &amp; boissons</button>
   </div>
 
   <div class="panel" id="p-menus" role="tabpanel" aria-labelledby="t-menus">
-    <p class="note">Menu = sandwich + frites + canette. Seul = le sandwich. <b>Spécial étudiant uniquement le midi.</b> Un steak en supplément : 2€ (90 g).</p>
+    <p class="note">Menu = sandwich + frites + canette. Seul = le sandwich. Pain rond, ou tortilla sur demande. <b>Spécial étudiant uniquement le midi.</b></p>
     <div class="grid">
     <article class="card"><h3>Kebab</h3><p>Salade, tomates, oignons, viande de kebab</p><div class="price"><span>Menu <b>10,50€</b></span><span>Seul <b>9€</b></span></div></article>
     <article class="card"><h3>Mixte</h3><p>Salade, tomates, oignons, 2 viandes au choix</p><div class="price"><span>Menu <b>11,50€</b></span><span>Seul <b>10€</b></span></div></article>
@@ -78,10 +79,16 @@
     <article class="card"><h3>Chicken</h3><p>Salade, tomates, oignons, poulet mariné</p><div class="price"><span>Menu <b>11€</b></span><span>Seul <b>9,50€</b></span></div></article>
     <article class="card"><h3>Kefta</h3><p>Salade, tomates, oignons, viande hachée marinée</p><div class="price"><span>Menu <b>10,50€</b></span><span>Seul <b>9€</b></span></div></article>
     <article class="card"><h3>Végétarien</h3><p>Salade, tomates, oignons, frites, fromage</p><div class="price"><span>Menu <b>6,50€</b></span><span>Seul <b>5€</b></span></div></article>
+  </div>
+  </div>
+
+  <div class="panel" id="p-burgers" role="tabpanel" aria-labelledby="t-burgers" hidden>
+    <p class="note">Pain burger, steaks hachés de 90 g. Menu = burger + frites + canette. Un steak en supplément : 2€.</p>
+    <div class="grid">
     <article class="card"><h3>Cheeseburger</h3><p>Salade, tomates, steak 90 g, oignons, fromage</p><div class="price"><span>Menu <b>8€</b></span><span>Seul <b>6,50€</b></span></div></article>
     <article class="card"><h3>Double Cheese</h3><p>Salade, tomates, 2 steaks 90 g, oignons, fromage</p><div class="price"><span>Menu <b>9,50€</b></span><span>Seul <b>8€</b></span></div></article>
     <article class="card"><h3>Triple Cheese</h3><p>Salade, tomates, 3 steaks 90 g, oignons, fromage</p><div class="price"><span>Menu <b>11€</b></span><span>Seul <b>9,50€</b></span></div></article>
-  </div>
+    </div>
   </div>
 
   <div class="panel" id="p-assiettes" role="tabpanel" aria-labelledby="t-assiettes" hidden>
