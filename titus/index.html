@@ -25,32 +25,32 @@
 </script>
 </head>
 <body>
+<body>
 <header class="nav" id="top">
-  <a class="logo" href="#top" aria-label="La Pause Restaurant Kebab – Chez Titus">
+  <a class="logo" href="#accueil" aria-label="La Pause Restaurant Kebab – Chez Titus, accueil">
     <span class="logo-la">LA</span><span class="logo-bars"><i></i><i></i></span><span class="logo-pause">PAUSE</span>
     <span class="logo-sub"><b>RESTAURANT</b><em>KEBAB</em></span>
   </a>
   <nav aria-label="Navigation principale">
-    <a href="#carte">La carte</a><a href="#avis">Avis</a><a href="#infos">Infos</a>
+    <a href="#carte" data-nav="carte">La carte</a><a href="#formules" data-nav="formules">Formules</a><a href="#avis" data-nav="avis">Avis</a><a href="#infos" data-nav="infos">Horaires &amp; accès</a>
   </nav>
   <a class="btn btn-small call" href="tel:+33237230434">📞 Appeler</a>
   <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
   <div class="drawer" id="drawer" hidden>
-    <p class="d-title">La carte</p>
-    <a href="#carte" data-tab="t-menus">Sandwichs</a>
-    <a href="#carte" data-tab="t-burgers">Burgers</a>
-    <a href="#carte" data-tab="t-assiettes">Assiettes</a>
-    <a href="#carte" data-tab="t-barquettes">Barquettes</a>
-    <a href="#carte" data-tab="t-extras">Desserts &amp; boissons</a>
-    <p class="d-title">Le restaurant</p>
-    <a href="#avis">Avis</a>
-    <a href="#infos">Horaires &amp; accès</a>
+    <a href="#accueil" data-nav="accueil">Accueil</a>
+    <a href="#carte" data-nav="carte">La carte</a>
+    <a class="subl" href="#carte-burgers">Burgers</a>
+    <a class="subl" href="#carte-assiettes">Assiettes</a>
+    <a class="subl" href="#carte-barquettes">Barquettes</a>
+    <a href="#formules" data-nav="formules">Formules &amp; bons plans</a>
+    <a href="#avis" data-nav="avis">Avis clients</a>
+    <a href="#infos" data-nav="infos">Horaires &amp; accès</a>
     <a class="d-call" href="tel:+33237230434">Appeler le 02 37 23 04 34</a>
   </div>
 </header>
-
 <main>
-<section class="hero">
+<section class="view" id="v-accueil" data-view="accueil">
+<div class="hero">
   <div class="hero-in">
     <p class="kicker">Luisant · Chartres Métropole · 100 % halal</p>
     <h1>Le seul moyen de<br><span>parvenir à ses faims.</span></h1>
@@ -67,14 +67,67 @@
     </ul>
   </div>
   <div class="status" id="status" aria-live="polite"></div>
+</div>
+<div class="strip"><span>Pain rond ou tortilla</span><span>Viande cuite sur place</span><span>Halal</span><span>Menu enfant</span><span>Parking gratuit</span></div>
+
+<div class="sec">
+  <h2><small>Les incontournables</small>Ce qu'on commande ici</h2>
+  <p class="note">Les clients citent surtout le kebab et le poulet. Chaque sandwich se prend seul ou en menu avec frites et canette.</p>
+  <div class="grid">
+    <article class="card"><h3>Kebab</h3><p>Salade, tomates, oignons, viande de kebab cuite sur place.</p><div class="price"><span>Menu <b>10,50€</b></span><span>Seul <b>9€</b></span></div></article>
+    <article class="card"><h3>Chicken</h3><p>Salade, tomates, oignons, poulet mariné.</p><div class="price"><span>Menu <b>11€</b></span><span>Seul <b>9,50€</b></span></div></article>
+    <article class="card"><h3>Mixte</h3><p>Deux viandes au choix, salade, tomates, oignons.</p><div class="price"><span>Menu <b>11,50€</b></span><span>Seul <b>10€</b></span></div></article>
+    <article class="card"><h3>Double Cheese</h3><p>Deux steaks de 90 g, fromage, salade, tomates, oignons.</p><div class="price"><span>Menu <b>9,50€</b></span><span>Seul <b>8€</b></span></div></article>
+  </div>
+  <p class="more"><a href="#carte">Toute la carte →</a></p>
+</div>
+
+<div class="band">
+  <div class="sec">
+    <h2><small>Pourquoi on y revient</small>Simple, rapide, généreux</h2>
+    <div class="why">
+      <div><h3>Cuit sur place</h3><p>La viande est préparée dans le restaurant : kebab, steak haché, chicken et kefta.</p></div>
+      <div><h3>Service rapide</h3><p>Même aux heures de pointe, l'attente reste courte. Sur place ou à emporter.</p></div>
+      <div><h3>Prix doux</h3><p>Un sandwich dès 5€, un menu complet dès 6,50€, et un menu étudiant le midi.</p></div>
+      <div><h3>100 % halal</h3><p>Une carte halal pour toute la famille, avec un menu enfant.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec teaser">
+  <div>
+    <h2><small>Bons plans</small>Étudiants, tickets resto</h2>
+    <p class="note">Menu étudiant le midi, Tickets Restaurant (2 maximum), paiement par carte dès 10€.</p>
+    <a class="btn btn-ghost" href="#formules">Voir les formules</a>
+  </div>
+  <div class="rate">
+    <b>4,6</b><span>★★★★★</span><small>550+ avis Google</small>
+    <a href="#avis">Lire les avis →</a>
+  </div>
+</div>
+
+<div class="dark-band">
+  <div class="sec">
+    <div class="two">
+      <div>
+        <h2><small>Venez nous voir</small>11 rue de l'Orme de Sours</h2>
+        <address>28600 Luisant</address>
+        <p><span class="tel">02 37 23 04 34</span></p>
+        <p class="more"><a href="#infos">Horaires &amp; accès →</a></p>
+      </div>
+      <div class="soon">
+        <p><b>Midi</b> 11h30 – 14h30</p>
+        <p><b>Soir</b> 18h – 22h30 (23h le vendredi et le samedi)</p>
+        <p><b>Dimanche</b> le soir uniquement</p>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
-<section class="strip">
-  <span>Pain rond ou tortilla</span><span>Viande cuite sur place</span><span>Halal</span><span>Menu enfant</span><span>Parking gratuit</span>
-</section>
-
-<section id="carte" class="sec">
-  <h2><small>La</small>Carte</h2>
+<section class="view" id="v-carte" data-view="carte" hidden>
+<div class="sec">
+  <h2><small>Sur place ou à emporter</small>La carte</h2>
   <div class="tabs" role="tablist" aria-label="Catégories de la carte">
     <button role="tab" id="t-menus" aria-controls="p-menus" aria-selected="true">Sandwichs</button>
     <button role="tab" id="t-burgers" aria-controls="p-burgers" aria-selected="false">Burgers</button>
@@ -134,19 +187,45 @@
         <ul class="list lite"><li><span>Canette 33 cl <small>Coca-Cola, Fanta, Sprite, Oasis, Orangina</small></span><b>1,50€</b></li><li><span>Christaline 50 cl</span><b>1€</b></li></ul></div>
     </div>
   </div>
+</div>
 </section>
 
-<section id="avis" class="sec reviews">
-  <h2>Ils en parlent</h2>
-  <div class="rating"><b>4,6</b><span>★★★★★</span><small>550+ avis Google · cuisine 4,8 · service 4,8</small></div>
-  <p class="note">Les clients citent surtout le kebab et le poulet, le service rapide même aux heures de pointe et les prix très abordables.</p>
-  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=La+Pause+Kebab+11+Rue+de+l%27Orme+de+Sours+Luisant" target="_blank" rel="noopener">Lire les avis sur Google</a>
+<section class="view" id="v-formules" data-view="formules" hidden>
+<div class="sec">
+  <h2><small>Bons plans</small>Formules &amp; paiement</h2>
+  <div class="grid">
+    <article class="card"><h3>Menu étudiant</h3><p>Une formule servie uniquement le midi. Pensez à votre carte étudiante.</p></article>
+    <article class="card"><h3>Menus</h3><p>Sandwich ou burger, frites et canette, pour 1,50€ à 2€ de plus que le sandwich seul.</p><a class="lnk" href="#carte">Voir les menus →</a></article>
+    <article class="card"><h3>Menu enfant</h3><p>Un menu pour les plus petits est proposé. Demandez-le au comptoir.</p></article>
+    <article class="card"><h3>Tickets Restaurant</h3><p>Acceptés, 2 tickets maximum jusqu'à 25€. Edenred et Pluxee.</p></article>
+    <article class="card"><h3>Carte bancaire</h3><p>CB, Visa et Mastercard dès 10€ d'achat.</p></article>
+    <article class="card"><h3>À emporter</h3><p>Toute la carte se prend à emporter. Sauce supplémentaire à emporter : 0,50€.</p><a class="lnk" href="#carte-barquettes">Voir les barquettes →</a></article>
+  </div>
+  <p class="fine">Tarifs sous réserve d'erreurs typographiques ou de modifications. La direction se réserve le droit de modifier ou de supprimer ses offres sans préavis.</p>
+</div>
 </section>
 
-<section id="infos" class="sec dark">
+<section class="view" id="v-avis" data-view="avis" hidden>
+<div class="sec reviews-in">
+  <h2><small>Ils en parlent</small>Avis clients</h2>
+  <div class="rating"><b>4,6</b><span>★★★★★</span><small>550+ avis Google</small></div>
+  <div class="bars">
+    <p><span>Cuisine</span><i style="--w:96%"></i><b>4,8</b></p>
+    <p><span>Service</span><i style="--w:96%"></i><b>4,8</b></p>
+    <p><span>Ambiance</span><i style="--w:92%"></i><b>4,6</b></p>
+  </div>
+  <p class="note">Les clients citent surtout le kebab et le poulet, un service rapide même aux heures de pointe et des prix très abordables.</p>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=La+Pause+Kebab+11+Rue+de+l%27Orme+de+Sours+Luisant" target="_blank" rel="noopener">Lire les avis sur Google</a>
+</div>
+</section>
+
+<section class="view" id="v-infos" data-view="infos" hidden>
+<div class="sec">
+  <h2><small>Nous trouver</small>Horaires &amp; accès</h2>
+  <div class="panelbox">
   <div class="two">
     <div>
-      <h2>Nous trouver</h2>
+      <h3 class="sub">Adresse</h3>
       <address>11 Rue de l'Orme de Sours<br>28600 Luisant</address>
       <p><a class="tel" href="tel:+33237230434">02 37 23 04 34</a></p>
       <p class="pay">Paiement : CB · Visa · Mastercard · Tickets Restaurant (2 max, 25€) · Edenred · Pluxee</p>
@@ -154,7 +233,7 @@
       <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=11+Rue+de+l%27Orme+de+Sours+28600+Luisant" target="_blank" rel="noopener">Itinéraire</a>
     </div>
     <div>
-      <h2>Horaires</h2>
+      <h3 class="sub">Horaires</h3>
       <table class="hours" id="hours">
         <tr data-d="1"><th>Lundi</th><td>11h30–14h30 · 18h–22h30</td></tr>
         <tr data-d="2"><th>Mardi</th><td>11h30–14h30 · 18h–22h30</td></tr>
@@ -166,7 +245,9 @@
       </table>
     </div>
   </div>
-  <iframe class="map" title="Plan d'accès" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=11+Rue+de+l%27Orme+de+Sours+28600+Luisant&output=embed"></iframe>
+  </div>
+  <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=11+Rue+de+l%27Orme+de+Sours+28600+Luisant" target="_blank" rel="noopener">Voir le restaurant sur Google Maps →</a>
+</div>
 </section>
 </main>
 
