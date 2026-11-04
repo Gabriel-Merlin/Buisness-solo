@@ -20,5 +20,5 @@
   b.addEventListener('click',function(){set(d.hidden)});
   d.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;set(false);var t=a.getAttribute('data-tab');if(t)document.getElementById(t).click();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
-  window.addEventListener('resize',function(){if(innerWidth>900)set(false)});
+  
 })();
