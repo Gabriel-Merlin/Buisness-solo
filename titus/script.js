@@ -50,3 +50,21 @@ var showTab;
   document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
   window.addEventListener('hashchange',function(){set(false)});
 })();
+
+/* Filtre des avis par étoiles */
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.barrow')),list=document.getElementById('rev-list'),out=document.getElementById('rev-count');
+  if(!rows.length||!list)return;
+  var cards=[].slice.call(list.querySelectorAll('.quote'));
+  function apply(f){
+    rows.forEach(function(r){r.setAttribute('aria-pressed',r.getAttribute('data-filter')===f)});
+    var n=0;cards.forEach(function(c){var ok=f==='all'||c.getAttribute('data-stars')===f;c.hidden=!ok;if(ok)n++;});
+    var tot=rows.filter(function(r){return r.getAttribute('data-filter')===f})[0].querySelector('b').textContent;
+    if(f==='all')out.innerHTML=n+' avis affichés<small>sur '+tot+' avis au total.</small>';
+    else if(n===0)out.innerHTML='Avis '+f+' étoile'+(f>1?'s':'')+' · '+tot+' au total<small>Aucun de ces avis n’est affiché pour le moment.</small>';
+    else out.innerHTML='Avis '+f+' étoile'+(f>1?'s':'')+' · '+n+' affiché'+(n>1?'s':'')+'<small>sur '+tot+' au total.</small>';
+  }
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  rows.forEach(function(r){r.addEventListener('click',function(){apply(r.getAttribute('data-filter'));out.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});})});
+  apply('all');
+})();

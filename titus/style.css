@@ -156,3 +156,19 @@ footer{text-align:center;padding:36px 16px 100px;border-top:1px solid var(--line
 .quote figcaption b{color:var(--ink);font-weight:600}
 .band .quote{background:var(--bg)}
 @media(max-width:700px){.rev-top{grid-template-columns:1fr;gap:20px}}
+
+button.barrow{display:grid;grid-template-columns:52px 1fr 40px;gap:12px;align-items:center;width:100%;text-align:left;background:none;border:1px solid transparent;border-radius:6px;padding:7px 10px;margin:0 -10px;color:var(--mut);font:400 14px Inter,sans-serif;cursor:pointer;transition:.15s}
+button.barrow:hover{background:var(--card);border-color:var(--line)}
+button.barrow[aria-pressed=true]{background:var(--card);border-color:var(--g);color:var(--ink)}
+button.barrow:focus-visible{outline:2px solid var(--g);outline-offset:1px}
+button.barrow i{display:block;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--g) var(--w),var(--line) var(--w))}
+button.barrow b{color:var(--ink);font:600 16px Oswald,sans-serif;text-align:right}
+.rev-top .bars{gap:2px}
+.rev-count{margin:30px 0 0;font:600 18px Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.rev-count small{display:block;margin-top:4px;color:var(--mut);font:400 14px Inter,sans-serif;text-transform:none;letter-spacing:0}
+.rev-top+.note{margin-bottom:0}
+.quote[hidden]{display:none}
+.quote .stars i{font-style:normal;color:var(--line)}
+.reviews-in{text-align:left}
+
+.rev-count{scroll-margin-top:96px}
