@@ -31,7 +31,7 @@
     <span class="logo-sub"><b>RESTAURANT</b><em>KEBAB</em></span>
   </a>
   <nav aria-label="Navigation principale">
-    <a href="#menus">Menus</a><a href="#assiettes">Assiettes</a><a href="#barquettes">Barquettes</a><a href="#infos">Infos</a>
+    <a href="#carte">La carte</a><a href="#avis">Avis</a><a href="#infos">Infos</a>
   </nav>
   <a class="btn btn-small" href="tel:+33237230434">📞 Appeler</a>
 </header>
@@ -44,7 +44,7 @@
     <p class="lead">Kebabs, burgers, assiettes et barquettes préparés sur place. Sur place ou à emporter, 7 jours sur 7.</p>
     <div class="cta">
       <a class="btn" href="tel:+33237230434">Commander : 02 37 23 04 34</a>
-      <a class="btn btn-ghost" href="#menus">Voir la carte</a>
+      <a class="btn btn-ghost" href="#carte">Voir la carte</a>
     </div>
     <ul class="badges">
       <li><b>4,6★</b> 550+ avis Google</li>
@@ -60,10 +60,18 @@
   <span>Pain rond uniquement</span><span>Sandwichs en tortilla possibles</span><span>Viande cuite sur place</span><span>Halal</span><span>Menu enfant</span><span>Parking gratuit</span>
 </section>
 
-<section id="menus" class="sec">
-  <h2><small>Nos</small>Menus</h2>
-  <p class="note">Menu = sandwich + frites + canette. Seul = le sandwich. <b>Spécial étudiant uniquement le midi.</b> Un steak en supplément : 2€ (90 g).</p>
-  <div class="grid">
+<section id="carte" class="sec">
+  <h2><small>La</small>Carte</h2>
+  <div class="tabs" role="tablist" aria-label="Catégories de la carte">
+    <button role="tab" id="t-menus" aria-controls="p-menus" aria-selected="true">Menus</button>
+    <button role="tab" id="t-assiettes" aria-controls="p-assiettes" aria-selected="false">Assiettes</button>
+    <button role="tab" id="t-barquettes" aria-controls="p-barquettes" aria-selected="false">Barquettes</button>
+    <button role="tab" id="t-extras" aria-controls="p-extras" aria-selected="false">Desserts &amp; boissons</button>
+  </div>
+
+  <div class="panel" id="p-menus" role="tabpanel" aria-labelledby="t-menus">
+    <p class="note">Menu = sandwich + frites + canette. Seul = le sandwich. <b>Spécial étudiant uniquement le midi.</b> Un steak en supplément : 2€ (90 g).</p>
+    <div class="grid">
     <article class="card"><h3>Kebab</h3><p>Salade, tomates, oignons, viande de kebab</p><div class="price"><span>Menu <b>10,50€</b></span><span>Seul <b>9€</b></span></div></article>
     <article class="card"><h3>Mixte</h3><p>Salade, tomates, oignons, 2 viandes au choix</p><div class="price"><span>Menu <b>11,50€</b></span><span>Seul <b>10€</b></span></div></article>
     <article class="card"><h3>Américain</h3><p>Salade, tomates, oignons, steak, fromage</p><div class="price"><span>Menu <b>10,50€</b></span><span>Seul <b>9€</b></span></div></article>
@@ -74,35 +82,20 @@
     <article class="card"><h3>Double Cheese</h3><p>Salade, tomates, 2 steaks 90 g, oignons, fromage</p><div class="price"><span>Menu <b>9,50€</b></span><span>Seul <b>8€</b></span></div></article>
     <article class="card"><h3>Triple Cheese</h3><p>Salade, tomates, 3 steaks 90 g, oignons, fromage</p><div class="price"><span>Menu <b>11€</b></span><span>Seul <b>9,50€</b></span></div></article>
   </div>
-</section>
-
-<section id="assiettes" class="sec dark">
-  <div class="two">
-    <div>
-      <h2><small>Nos</small>Assiettes</h2>
-      <p class="note">Frites, salade et crudités. Sur place ou à emporter.</p>
-      <ul class="list">
-        <li><span>Kebab</span><b>13€</b></li>
-        <li><span>Poulet</span><b>14€</b></li>
-        <li><span>Mixte <small>2 viandes au choix</small></span><b>14€</b></li>
-      </ul>
-      <p class="meats"><b>Nos viandes</b> Kebab · Steak haché · Chicken · Kefta</p>
-    </div>
-    <div>
-      <h2><small>Nos</small>Desserts &amp; boissons</h2>
-      <ul class="list">
-        <li><span>Tarte aux daims</span><b>3€</b></li>
-        <li><span>Tiramisu</span><b>3€</b></li>
-        <li><span>Canette 33 cl <small>Coca-Cola, Fanta, Sprite, Oasis, Orangina</small></span><b>1,50€</b></li>
-        <li><span>Christaline 50 cl</span><b>1€</b></li>
-      </ul>
-    </div>
   </div>
-</section>
 
-<section id="barquettes" class="sec">
-  <h2><small>Nos</small>Barquettes</h2>
-  <div class="tables">
+  <div class="panel" id="p-assiettes" role="tabpanel" aria-labelledby="t-assiettes" hidden>
+    <p class="note">Frites, salade et crudités. Sur place ou à emporter.</p>
+    <ul class="list lite">
+      <li><span>Kebab</span><b>13€</b></li>
+      <li><span>Poulet</span><b>14€</b></li>
+      <li><span>Mixte <small>2 viandes au choix</small></span><b>14€</b></li>
+    </ul>
+    <p class="meats"><b>Nos viandes</b> Kebab · Steak haché · Chicken · Kefta</p>
+  </div>
+
+  <div class="panel" id="p-barquettes" role="tabpanel" aria-labelledby="t-barquettes" hidden>
+    <div class="tables">
     <table><caption>Frites</caption><tr><th>Mini</th><td>1,50€</td></tr><tr><th>Petite</th><td>2,50€</td></tr><tr><th>Moyenne</th><td>3€</td></tr><tr><th>Grande</th><td>3,50€</td></tr></table>
     <table><caption>Viande kebab</caption><tr><th>Mini</th><td>4€</td></tr><tr><th>Petite</th><td>9€</td></tr><tr><th>Moyenne</th><td>11€</td></tr><tr><th>Grande</th><td>12€</td></tr></table>
     <table><caption>Frites + viande</caption><tr><th>Mini</th><td>2,50€</td></tr><tr><th>Petite</th><td>6€</td></tr><tr><th>Moyenne</th><td>7€</td></tr><tr><th>Grande</th><td>8€</td></tr></table>
@@ -111,9 +104,19 @@
     <table><caption>Suppléments</caption><tr><th>Sauce à emporter</th><td>0,50€</td></tr><tr><th>Fromage</th><td>0,50€</td></tr><tr><th>Frites</th><td>1€</td></tr><tr><th>Viande</th><td>2,50€</td></tr></table>
   </div>
   <p class="fine">Tarifs sous réserve d'erreurs typographiques ou de modifications. La direction se réserve le droit de modifier ou de supprimer ses offres sans préavis.</p>
+  </div>
+
+  <div class="panel" id="p-extras" role="tabpanel" aria-labelledby="t-extras" hidden>
+    <div class="two">
+      <div><h3 class="sub">Desserts</h3>
+        <ul class="list lite"><li><span>Tarte aux daims</span><b>3€</b></li><li><span>Tiramisu</span><b>3€</b></li></ul></div>
+      <div><h3 class="sub">Boissons</h3>
+        <ul class="list lite"><li><span>Canette 33 cl <small>Coca-Cola, Fanta, Sprite, Oasis, Orangina</small></span><b>1,50€</b></li><li><span>Christaline 50 cl</span><b>1€</b></li></ul></div>
+    </div>
+  </div>
 </section>
 
-<section class="sec reviews">
+<section id="avis" class="sec reviews">
   <h2>Ils en parlent</h2>
   <div class="rating"><b>4,6</b><span>★★★★★</span><small>550+ avis Google · cuisine 4,8 · service 4,8</small></div>
   <p class="note">Les clients citent surtout le kebab et le poulet, le service rapide même aux heures de pointe et les prix très abordables.</p>

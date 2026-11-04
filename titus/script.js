@@ -6,3 +6,10 @@
   if(el){el.className='status on '+(open?'open':'');el.textContent=open?'Ouvert · jusqu’à '+f(open):(next!==null?'Fermé · ouvre à '+f(next):'Fermé · ouvre demain');}
   var r=document.querySelector('#hours tr[data-d="'+d+'"]');if(r)r.className='today';
 })();
+
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tabs [role=tab]'));
+  function show(t){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){show(b)});b.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(n){var t=tabs[(i+n+tabs.length)%tabs.length];t.focus();show(t);}});});
+  show(tabs[0]);
+})();
